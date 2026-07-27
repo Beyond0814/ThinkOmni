@@ -84,9 +84,9 @@
 
     <section class="metric-band" aria-label="Headline results">
       <div class="shell metric-grid">
-        <div><strong>93.70%</strong><span>Average intra-dataset ACC</span></div>
-        <div><strong>85.15%</strong><span>Average cross-dataset F1</span></div>
-        <div><strong>88.05%</strong><span>Average intra-dataset mAP</span></div>
+        <div class="metric-featured"><strong>93.70%</strong><span>Average intra-dataset ACC</span><small>+0.86 points over the best SSL baseline</small></div>
+        <div class="metric-featured"><strong>85.15%</strong><span>Average cross-dataset F1</span><small>+7.39 points over the best ALLM baseline</small></div>
+        <div class="metric-featured"><strong>88.05%</strong><span>Average intra-dataset mAP</span><small>+4.36 points over the best ALLM baseline</small></div>
         <div class="metric-featured"><strong>74.67%</strong><span>Average cross-dataset mAP</span><small>+15.32 points over the best ALLM baseline</small></div>
       </div>
     </section>
@@ -131,17 +131,16 @@
         <figcaption>FACoT construction: eight public source datasets, seed CoT annotation, expert verification, SFT-based expansion, and CLAP-based audio-text consistency filtering.</figcaption>
       </figure>
       <div class="shell facot-facts">
-        <div><strong>100K</strong><span>audio samples</span></div>
-        <div><strong>8</strong><span>training sources</span></div>
-        <div><strong>3</strong><span>authenticity classes</span></div>
-        <div><strong>3 cue types</strong><span>semantic, acoustic, temporal</span></div>
+        <div><strong>100K</strong><span>audio samples with structured forensic evidence and reasoning annotations</span></div>
+        <div><strong>8</strong><span>source datasets: 19LA, HAD, PS, LAV-DF, ArEnAV, LPS, SINE, and AV-1M++</span></div>
+        <div><strong>3</strong><span>authenticity classes: fully real, fully fake, and partially fake</span></div>
       </div>
     </section>
 
     <section class="section method-section" id="method">
       <div class="shell section-heading">
         <p class="eyebrow">Method</p>
-        <h2>Forensic-Aware Modality-Incremental Learning</h2>
+        <h2>Forensic-Aware Modality-Incremental Learning <span class="heading-abbr">(FMIL)</span></h2>
         <p>Built on Qwen2.5-Omni, ThinkOmni progressively integrates semantic, acoustic, and spectral-visual representations while reducing interference among heterogeneous modalities.</p>
       </div>
       <figure class="shell-wide framework-figure">
@@ -151,19 +150,19 @@
       </figure>
       <div class="shell method-list">
         <article>
-          <span>01</span><div><h3>Semantic Forensic Adaptation</h3><p>Establish transferable semantic reasoning from speech content and speaker information.</p></div><strong>SFA</strong>
+          <span>01</span><div><h3>Semantic Forensic Adaptation <span class="method-abbr">(SFA)</span></h3><p>Establish transferable semantic reasoning from speech content and speaker information.</p></div>
         </article>
         <article>
-          <span>02</span><div><h3>Acoustic Forensic Augmentation</h3><p>Introduce fine-grained acoustic evidence to capture subtle manipulation artifacts.</p></div><strong>AFA</strong>
+          <span>02</span><div><h3>Acoustic Forensic Augmentation <span class="method-abbr">(AFA)</span></h3><p>Introduce fine-grained acoustic evidence to capture subtle manipulation artifacts.</p></div>
         </article>
         <article>
-          <span>03</span><div><h3>Multi-modal Forensic Refinement</h3><p>Integrate spectrogram-based visual cues for cross-modal verification.</p></div><strong>MFR</strong>
+          <span>03</span><div><h3>Multi-modal Forensic Refinement <span class="method-abbr">(MFR)</span></h3><p>Integrate spectrogram-based visual cues for cross-modal verification.</p></div>
         </article>
       </div>
 
       <div class="shell safe-layout">
         <div>
-          <p class="eyebrow">Semantic-Acoustic Forensic Enhancer</p>
+          <p class="eyebrow">Semantic-Acoustic Forensic Enhancer (SAFE)</p>
           <h2>Local and global forensic modeling</h2>
           <p>SAFE comprises a local cross-attention branch for fine-grained cue interaction and a global forgery discriminator for long-range forensic modeling. A learned gate fuses both views before the Thinker backbone.</p>
         </div>
