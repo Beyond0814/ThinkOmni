@@ -1,242 +1,256 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="ThinkOmni is a reasoning-driven omni-modal LLM for explicit audio forensic reasoning, spoofing detection, and temporal manipulation localization.">
-  <meta name="keywords" content="ThinkOmni, audio forgery detection, deepfake audio, temporal localization, omni-modal LLM, chain-of-thought, FACoT">
+  <meta name="description" content="ThinkOmni is a reasoning-driven omni-modal LLM for audio forgery detection and temporal localization.">
+  <meta name="keywords" content="ThinkOmni, audio forgery detection, audio deepfake, temporal localization, omni-modal LLM, chain-of-thought, FACoT">
   <meta property="og:title" content="ThinkOmni: Reasoning-Driven Omni-Modal Audio Forensics">
-  <meta property="og:description" content="Unified forensic reasoning, spoofing detection, and temporal manipulation localization across semantic, acoustic, and spectral-visual evidence.">
+  <meta property="og:description" content="Explicit forensic reasoning for joint audio forgery detection and temporal manipulation localization.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://beyond0814.github.io/ThinkOmni/">
   <meta property="og:image" content="https://beyond0814.github.io/ThinkOmni/static/images/model-comparison.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ThinkOmni: Reasoning-Driven Omni-Modal Audio Forensics">
-  <meta name="twitter:description" content="Explicit forensic reasoning for audio forgery detection and temporal localization.">
+  <meta name="twitter:description" content="Explicit forensic reasoning for joint audio forgery detection and temporal manipulation localization.">
   <meta name="twitter:image" content="https://beyond0814.github.io/ThinkOmni/static/images/model-comparison.png">
-  <title>ThinkOmni | Reasoning-Driven Omni-Modal Audio Forensics</title>
+  <title>ThinkOmni: A Reasoning-Driven Omni-Modal LLM Framework</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro|Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   <script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
   <script defer src="static/js/index.js"></script>
 </head>
 <body>
-  <header class="site-header" id="top">
-    <nav class="nav shell" aria-label="Main navigation">
-      <a class="brand" href="#top" aria-label="ThinkOmni home">
-        <span class="brand-mark" aria-hidden="true">T</span>
-        <span>ThinkOmni</span>
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" title="Open navigation">
-        <i data-lucide="menu" aria-hidden="true"></i>
-        <span class="sr-only">Open navigation</span>
-      </button>
-      <div class="nav-links" id="nav-links">
-        <a href="#overview">Overview</a>
-        <a href="#facot">FACoT</a>
-        <a href="#method">Method</a>
-        <a href="#results">Results</a>
-        <a href="#cases">Cases</a>
-        <a href="#citation">Citation</a>
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item has-text-weight-bold" href="#top">ThinkOmni</a>
+        <button class="navbar-burger" type="button" aria-label="Open navigation" aria-expanded="false" data-target="navbar-menu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
       </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="shell hero-inner">
-        <p class="eyebrow">Reasoning-driven audio forensics</p>
-        <h1>ThinkOmni</h1>
-        <p class="hero-subtitle">A Reasoning-Driven Omni-Modal LLM Framework for Audio Forgery Detection and Localization</p>
-
-        <div class="authors" aria-label="Authors">
-          <a href="https://orcid.org/0000-0002-0514-3698" target="_blank" rel="noreferrer">Yuxiong Xu</a>
-          <a href="https://orcid.org/0000-0002-5291-4635" target="_blank" rel="noreferrer">Kaiqing Lin</a>
-          <a href="https://orcid.org/0000-0002-2613-5451" target="_blank" rel="noreferrer">Bin Li</a>
-          <a href="https://orcid.org/0000-0003-0532-9481" target="_blank" rel="noreferrer">Haodong Li</a>
-          <a href="https://orcid.org/0009-0000-2761-1918" target="_blank" rel="noreferrer">Sheng Li</a>
-        </div>
-        <p class="affiliations">Shenzhen University &nbsp;·&nbsp; Afirstsoft Technology Group Co., Ltd.</p>
-
-        <div class="hero-actions" aria-label="Project resources">
-          <span class="button disabled" aria-disabled="true" title="Paper coming soon">
-            <i data-lucide="file-text" aria-hidden="true"></i><span>Paper</span><small>soon</small>
-          </span>
-          <a class="button primary" href="https://github.com/Beyond0814/ThinkOmni" target="_blank" rel="noreferrer">
-            <i data-lucide="github" aria-hidden="true"></i><span>Repository</span>
-          </a>
-          <span class="button disabled" aria-disabled="true" title="Model checkpoints coming soon">
-            <i data-lucide="box" aria-hidden="true"></i><span>Models</span><small>soon</small>
-          </span>
-          <span class="button disabled" aria-disabled="true" title="FACoT data coming soon">
-            <i data-lucide="database" aria-hidden="true"></i><span>FACoT</span><small>soon</small>
-          </span>
-        </div>
-
-        <div class="hero-figure">
-          <img src="static/images/model-comparison.png" alt="Comparison of SSL-based, ALLM-based, and ThinkOmni audio forgery detection and localization paradigms">
+      <div id="navbar-menu" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="#concept">Concept</a>
+          <a class="navbar-item" href="#abstract">Abstract</a>
+          <a class="navbar-item" href="#framework">Framework</a>
+          <a class="navbar-item" href="#facot">FACoT</a>
+          <a class="navbar-item" href="#results">Results</a>
+          <a class="navbar-item" href="#cases">Cases</a>
+          <a class="navbar-item" href="#bibtex">BibTeX</a>
         </div>
       </div>
-    </section>
+    </div>
+  </nav>
 
-    <section class="section intro" id="overview">
-      <div class="shell narrow">
-        <p class="section-kicker">Why ThinkOmni</p>
-        <h2>From a verdict to inspectable forensic reasoning</h2>
-        <p class="lead">Existing systems often learn dataset-specific artifacts and return a label or boundary without explaining the evidence behind it. ThinkOmni connects semantic inconsistencies, acoustic artifacts, and spectral-visual cues to three coordinated outputs: a forensic rationale, an authenticity class, and manipulated time intervals.</p>
-        <div class="output-row" aria-label="ThinkOmni outputs">
-          <div><i data-lucide="brain" aria-hidden="true"></i><strong>Reason</strong><span>Explain the evidence</span></div>
-          <div><i data-lucide="shield-check" aria-hidden="true"></i><strong>Detect</strong><span>Real, fully fake, or partially fake</span></div>
-          <div><i data-lucide="scan-line" aria-hidden="true"></i><strong>Localize</strong><span>Find one or more forged intervals</span></div>
-        </div>
-      </div>
-    </section>
+  <main id="top">
+    <section class="hero publication-header">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <p class="publication-kicker">Explicit reasoning for generalizable audio forensics</p>
+              <h1 class="title is-1 publication-title">ThinkOmni: A Reasoning-Driven Omni-Modal LLM Framework for Audio Forgery Detection and Localization</h1>
 
-    <section class="section band" id="facot">
-      <div class="shell">
-        <div class="section-heading split">
-          <div>
-            <p class="section-kicker">FACoT dataset</p>
-            <h2>100K samples with structured forensic supervision</h2>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><a href="https://orcid.org/0000-0002-0514-3698" target="_blank" rel="noreferrer">Yuxiong Xu</a>,</span>
+                <span class="author-block"><a href="https://orcid.org/0000-0002-5291-4635" target="_blank" rel="noreferrer">Kaiqing Lin</a>,</span>
+                <span class="author-block"><a href="https://orcid.org/0000-0002-2613-5451" target="_blank" rel="noreferrer">Bin Li</a>,</span>
+                <span class="author-block"><a href="https://orcid.org/0000-0003-0532-9481" target="_blank" rel="noreferrer">Haodong Li</a>,</span>
+                <span class="author-block"><a href="https://orcid.org/0009-0000-2761-1918" target="_blank" rel="noreferrer">Sheng Li</a></span>
+              </div>
+
+              <div class="is-size-5 publication-authors affiliations">
+                <span class="author-block">Shenzhen University &nbsp;·&nbsp; Afirstsoft Technology Group Co., Ltd.</span>
+              </div>
+
+              <div class="publication-links">
+                <span class="link-block">
+                  <span class="button is-normal is-rounded resource-disabled" aria-disabled="true" title="Paper coming soon">
+                    <span class="icon"><i data-lucide="file-text" aria-hidden="true"></i></span>
+                    <span>Paper <small>Coming soon</small></span>
+                  </span>
+                </span>
+                <span class="link-block">
+                  <a class="external-link button is-normal is-rounded is-dark" href="https://github.com/Beyond0814/ThinkOmni" target="_blank" rel="noreferrer">
+                    <span class="icon"><i data-lucide="github" aria-hidden="true"></i></span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <span class="button is-normal is-rounded resource-disabled" aria-disabled="true" title="Model checkpoints coming soon">
+                    <span class="icon"><i data-lucide="box" aria-hidden="true"></i></span>
+                    <span>Models <small>Coming soon</small></span>
+                  </span>
+                </span>
+                <span class="link-block">
+                  <span class="button is-normal is-rounded resource-disabled" aria-disabled="true" title="FACoT data coming soon">
+                    <span class="icon"><i data-lucide="database" aria-hidden="true"></i></span>
+                    <span>FACoT <small>Coming soon</small></span>
+                  </span>
+                </span>
+              </div>
+              <div class="hero-proof" aria-label="Key result">
+                <strong>74.67%</strong>
+                <span>cross-dataset temporal localization mAP</span>
+                <small>+15.32 percentage points over the strongest ALLM baseline</small>
+              </div>
+            </div>
           </div>
-          <p>FACoT aggregates eight public source datasets across fully real, fully fake, and partially fake audio. A human-machine collaborative pipeline creates structured rationales, followed by expert-defined quality control and CLAP-based grounding filters.</p>
-        </div>
-        <figure class="figure-panel">
-          <img src="static/images/facot-pipeline.png" alt="FACoT construction pipeline from data selection through annotation and consistency filtering" loading="lazy">
-          <figcaption>FACoT construction: class-balanced source selection, scalable forensic annotation, and audio-text consistency filtering.</figcaption>
-        </figure>
-        <div class="facts" aria-label="FACoT statistics">
-          <div><strong>100K</strong><span>audio samples</span></div>
-          <div><strong>8</strong><span>training sources</span></div>
-          <div><strong>3</strong><span>authenticity classes</span></div>
-          <div><strong>3 levels</strong><span>semantic, acoustic, temporal</span></div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="method">
-      <div class="shell">
-        <div class="section-heading">
-          <p class="section-kicker">Method</p>
-          <h2>Progressive omni-modal forensic alignment</h2>
-          <p>Built on Qwen2.5-Omni, ThinkOmni adds a dedicated acoustic pathway and aligns evidence progressively instead of forcing all modalities to adapt at once.</p>
-        </div>
-        <figure class="figure-panel wide-figure">
-          <img src="static/images/framework.png" alt="ThinkOmni architecture and three-stage forensic-aware modality-incremental learning" loading="lazy">
-          <figcaption>FMIL proceeds through Semantic Forensic Adaptation, Acoustic Forensic Augmentation, and Multi-modal Forensic Refinement.</figcaption>
-        </figure>
-
-        <div class="method-grid">
-          <article>
-            <span class="step">01</span>
-            <h3>FMIL</h3>
-            <p>Progressively aligns semantic, acoustic, and spectral-visual representations while reducing interference among heterogeneous modalities.</p>
-          </article>
-          <article>
-            <span class="step">02</span>
-            <h3>SAFE</h3>
-            <p>Combines local cross-attention with a global forgery discriminator to preserve fine-grained artifacts and long-range forensic context.</p>
-          </article>
-          <article>
-            <span class="step">03</span>
-            <h3>FCML</h3>
-            <p>Balances reasoning, detection, and localization with role-aware token weights and condition-adaptive temporal boundary loss.</p>
-          </article>
-        </div>
-
-        <div class="feature-detail">
-          <div>
-            <p class="section-kicker">Semantic-Acoustic Forensic Enhancer</p>
-            <h3>Local evidence, global context</h3>
-            <p>SAFE lets acoustic features query semantic evidence at fine temporal resolution, while a global branch models utterance-level inconsistency. A learned gate fuses both views before they enter the reasoning backbone.</p>
+    <section class="contribution-strip" aria-label="Core contributions">
+      <div class="container is-max-desktop">
+        <div class="contribution-grid">
+          <div class="contribution-item">
+            <span class="contribution-icon"><i data-lucide="database" aria-hidden="true"></i></span>
+            <div><strong>FACoT</strong><span>100K samples with structured, sample-aligned forensic reasoning</span></div>
           </div>
-          <figure>
-            <img src="static/images/safe-module.png" alt="Architecture of the SAFE fusion module" loading="lazy">
-          </figure>
+          <div class="contribution-item">
+            <span class="contribution-icon"><i data-lucide="network" aria-hidden="true"></i></span>
+            <div><strong>FMIL</strong><span>Progressive semantic, acoustic, and spectral-visual alignment</span></div>
+          </div>
+          <div class="contribution-item">
+            <span class="contribution-icon"><i data-lucide="scale" aria-hidden="true"></i></span>
+            <div><strong>FCML</strong><span>Coordinated reasoning, detection, and temporal localization</span></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section results-band" id="results">
-      <div class="shell">
-        <div class="section-heading split light">
-          <div>
-            <p class="section-kicker">Results</p>
-            <h2>Generalization under dataset shift</h2>
-          </div>
-          <p>All methods are trained under the same 100K-sample FACoT protocol. ADD 2023 Track 2 and Speech-Forensics are held out for cross-dataset evaluation.</p>
-        </div>
-        <div class="metric-grid">
-          <div class="metric">
-            <span class="metric-value">93.70</span><span class="metric-unit">%</span>
-            <strong>Intra-dataset ACC</strong>
-            <p>Average over seven evaluation groups</p>
-          </div>
-          <div class="metric">
-            <span class="metric-value">85.15</span><span class="metric-unit">%</span>
-            <strong>Cross-dataset F1</strong>
-            <p>ADD and Speech-Forensics average</p>
-          </div>
-          <div class="metric accent">
-            <span class="metric-value">88.05</span><span class="metric-unit">%</span>
-            <strong>Intra-dataset mAP</strong>
-            <p>Temporal localization at tIoU 0.5:0.95</p>
-          </div>
-          <div class="metric accent">
-            <span class="metric-value">74.67</span><span class="metric-unit">%</span>
-            <strong>Cross-dataset mAP</strong>
-            <p>+15.32 points over the best ALLM baseline</p>
+    <section class="section first-section" id="concept">
+      <div class="container is-max-desktop">
+        <div class="box project-box">
+          <div class="columns is-centered">
+            <div class="column is-full has-text-centered">
+              <img class="figure-image concept-image" src="static/images/model-comparison.png" alt="Comparison of SSL-based, ALLM-based, and ThinkOmni audio forgery detection and localization paradigms">
+              <div class="content figure-description">
+                <p>SSL-based methods predict authenticity or temporal boundaries directly, while existing ALLM-based methods formulate audio forgery detection and localization as sequence generation but often lack explicit forensic reasoning supervision. ThinkOmni integrates semantic, acoustic, and spectral evidence for joint reasoning, detection, and localization.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <figure class="result-figure">
-          <img src="static/images/reasoning-ablation.png" alt="Cross-dataset ablation of reasoning supervision and inference strategies" loading="lazy">
-          <figcaption>Cross-dataset ablation: sample-specific reasoning and FCML improve temporal evidence modeling, while shuffled rationales degrade all metrics.</figcaption>
-        </figure>
-        <p class="result-note">The cross-dataset claims are limited to the two held-out benchmarks evaluated in the paper. Full tables, protocols, and uncertainty discussion will accompany the paper release.</p>
+      </div>
+    </section>
+
+    <section class="section" id="abstract">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="box project-box">
+              <h2 class="title is-3">Abstract</h2>
+              <div class="content has-text-justified">
+                <p>Existing audio forgery detection and localization methods often overfit dataset-specific low-level artifacts, limiting their generalization to subtle, localized, and unseen manipulations. Recent audio large language model approaches cast the task as question answering but still model forensic evidence implicitly, without linking manipulation cues to predictions.</p>
+                <p>ThinkOmni is a reasoning-driven omni-modal large language model that jointly performs explicit forensic reasoning, spoofing detection, and temporal manipulation localization. We construct Forensic-Aware Chain-of-Thought (FACoT), a 100K-sample dataset with structured forensic evidence and reasoning annotations. Forensic-Aware Modality-Incremental Learning progressively aligns semantic, acoustic, and spectral-visual representations with the LLM backbone, while Forensic-Consistent Multi-task Loss coordinates reasoning generation, detection, and localization.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="framework">
+      <div class="container is-max-desktop">
+        <div class="box project-box">
+          <h2 class="title is-3 has-text-centered">ThinkOmni Framework</h2>
+          <img class="figure-image" src="static/images/framework.png" alt="ThinkOmni framework with three-stage forensic-aware modality-incremental learning" loading="lazy">
+          <div class="content figure-description">
+            <p>ThinkOmni is built on Qwen2.5-Omni and progressively integrates complementary forensic evidence. Semantic Forensic Adaptation first establishes semantic reasoning, Acoustic Forensic Augmentation introduces fine-grained acoustic evidence through SAFE, and Multi-modal Forensic Refinement adds spectrogram-based visual cues while preserving previously aligned encoders.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="facot">
+      <div class="container is-max-desktop">
+        <div class="box project-box">
+          <h2 class="title is-3 has-text-centered">FACoT Dataset</h2>
+          <img class="figure-image" src="static/images/facot-pipeline.png" alt="FACoT construction pipeline from source audio collection to annotation and filtering" loading="lazy">
+          <div class="content figure-description">
+            <p>FACoT contains 100K samples aggregated from eight public benchmarks across fully real, fully fake, and partially fake audio. Its human-machine collaborative pipeline combines seed chain-of-thought annotation, expert-defined verification, large-scale SFT-based expansion, and CLAP-based filtering for audio-text consistency.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="safe">
+      <div class="container is-max-desktop">
+        <div class="box project-box">
+          <h2 class="title is-3 has-text-centered">Semantic-Acoustic Forensic Enhancer</h2>
+          <img class="figure-image safe-image" src="static/images/safe-module.png" alt="Architecture of the Semantic-Acoustic Forensic Enhancer" loading="lazy">
+          <div class="content figure-description">
+            <p>SAFE aligns semantic and acoustic evidence through a local cross-attention branch for fine-grained cue interaction and a global forgery discriminator for utterance-level forensic context. A learned gate fuses both branches before the evidence enters the Thinker backbone.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="results">
+      <div class="container is-max-desktop">
+        <div class="box project-box">
+          <h2 class="title is-3 has-text-centered">Experimental Results</h2>
+          <div class="result-summary columns is-multiline is-centered">
+            <div class="column is-half-tablet is-one-quarter-desktop"><div class="result-item"><strong>93.70%</strong><span>Intra-dataset ACC</span></div></div>
+            <div class="column is-half-tablet is-one-quarter-desktop"><div class="result-item"><strong>85.15%</strong><span>Cross-dataset F1</span></div></div>
+            <div class="column is-half-tablet is-one-quarter-desktop"><div class="result-item"><strong>88.05%</strong><span>Intra-dataset mAP</span></div></div>
+            <div class="column is-half-tablet is-one-quarter-desktop"><div class="result-item"><strong>74.67%</strong><span>Cross-dataset mAP</span></div></div>
+          </div>
+          <img class="figure-image result-image" src="static/images/reasoning-ablation.png" alt="Cross-dataset ablation of reasoning supervision and inference strategies" loading="lazy">
+          <div class="content figure-description">
+            <p>ThinkOmni achieves the strongest reported average localization performance under both intra- and cross-dataset evaluation. The ablation results show that FCML and sample-specific reasoning improve temporal evidence modeling, while shuffled rationales degrade detection and localization.</p>
+            <p class="result-caveat">Cross-dataset claims are limited to ADD 2023 Track 2 and Speech-Forensics, the two held-out benchmarks evaluated in the paper.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="section" id="cases">
-      <div class="shell">
-        <div class="section-heading split">
-          <div>
-            <p class="section-kicker">Qualitative analysis</p>
-            <h2>Reasoning that can be inspected</h2>
+      <div class="container is-max-desktop">
+        <div class="box project-box">
+          <h2 class="title is-3 has-text-centered">Case Studies</h2>
+          <img class="figure-image case-image" src="static/images/case-studies.png" alt="ThinkOmni reasoning examples for fully real, fully fake, and partially fake audio" loading="lazy">
+          <div class="content figure-description">
+            <p>Representative examples show how ThinkOmni organizes acoustic, prosodic, environmental, and semantic cues into an inspectable rationale while producing an authenticity class and temporal localization result.</p>
           </div>
-          <p>ThinkOmni organizes acoustic, prosodic, environmental, and semantic cues into a rationale while producing the class and temporal boundaries. These cases illustrate behavior rather than establish reliability on their own.</p>
         </div>
-        <figure class="figure-panel case-figure">
-          <img src="static/images/case-studies.png" alt="ThinkOmni reasoning examples for fully real, fully fake, and partially fake audio" loading="lazy">
-          <figcaption>Representative outputs for fully real, fully fake, and partially fake audio.</figcaption>
-        </figure>
       </div>
     </section>
 
-    <section class="section band" id="citation">
-      <div class="shell narrow">
-        <p class="section-kicker">Citation</p>
-        <h2>Cite ThinkOmni</h2>
-        <p>The publication record will be updated when the paper is publicly available.</p>
-        <div class="code-wrap">
-          <button class="copy-button" type="button" data-copy-target="bibtex" title="Copy BibTeX">
-            <i data-lucide="copy" aria-hidden="true"></i><span>Copy</span>
-          </button>
-          <pre id="bibtex"><code>@misc{xu2026thinkomni,
+    <section class="section" id="bibtex">
+      <div class="container is-max-desktop">
+        <div class="box project-box">
+          <div class="content">
+            <h2 class="title is-3">BibTeX</h2>
+            <p>The publication record will be updated when the paper is publicly available.</p>
+            <div class="bibtex-wrap">
+              <button class="copy-button" type="button" data-copy-target="bibtex-code" title="Copy BibTeX">
+                <i data-lucide="copy" aria-hidden="true"></i><span>Copy</span>
+              </button>
+              <pre id="bibtex-code"><code>@misc{xu2026thinkomni,
   title  = {ThinkOmni: A Reasoning-Driven Omni-Modal LLM Framework for Audio Forgery Detection and Localization},
   author = {Yuxiong Xu and Kaiqing Lin and Bin Li and Haodong Li and Sheng Li},
   year   = {2026}
 }</code></pre>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="shell footer-inner">
-      <div><strong>ThinkOmni</strong><span>Reasoning-driven omni-modal audio forensics</span></div>
-      <p>Built from the <a href="https://github.com/Beyond0814/ALDEN" target="_blank" rel="noreferrer">ALDEN project-page structure</a> and the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noreferrer">Academic Project Page Template</a>.</p>
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>This page follows the <a href="https://github.com/Beyond0814/ALDEN" target="_blank" rel="noreferrer">ALDEN project page</a>, adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noreferrer">Academic Project Page Template</a>.</p>
+      </div>
     </div>
   </footer>
 </body>
