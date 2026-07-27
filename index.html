@@ -76,43 +76,45 @@
         </div>
       </div>
       <div class="shell-wide hero-visual">
-        <img src="static/images/model-comparison-single.png" alt="Single-case comparison of SSL-based, ALLM-based, and ThinkOmni audio forgery detection and localization">
+        <a class="figure-link" href="static/images/model-comparison-single.png" target="_blank" rel="noreferrer" title="Open full-resolution figure">
+          <img src="static/images/model-comparison-single.png" alt="Single-case comparison of SSL-based, ALLM-based, and ThinkOmni audio forgery detection and localization">
+        </a>
       </div>
     </section>
 
     <section class="metric-band" aria-label="Headline results">
       <div class="shell metric-grid">
-        <div><strong>93.70%</strong><span>Intra-dataset ACC</span></div>
-        <div><strong>85.15%</strong><span>Cross-dataset F1</span></div>
-        <div><strong>88.05%</strong><span>Intra-dataset mAP</span></div>
-        <div class="metric-featured"><strong>74.67%</strong><span>Cross-dataset mAP</span><small>+15.32 points over the best ALLM baseline</small></div>
+        <div><strong>93.70%</strong><span>Average intra-dataset ACC</span></div>
+        <div><strong>85.15%</strong><span>Average cross-dataset F1</span></div>
+        <div><strong>88.05%</strong><span>Average intra-dataset mAP</span></div>
+        <div class="metric-featured"><strong>74.67%</strong><span>Average cross-dataset mAP</span><small>+15.32 points over the best ALLM baseline</small></div>
       </div>
     </section>
 
     <section class="section overview" id="overview">
       <div class="shell overview-grid">
         <div class="section-heading">
-          <p class="eyebrow">The problem</p>
-          <h2>Beyond a label and a boundary</h2>
+          <p class="eyebrow">From implicit prediction</p>
+          <h2>Evidence-driven analysis</h2>
         </div>
         <div class="overview-copy">
-          <p class="lead">Existing audio forgery systems often learn dataset-specific artifacts and return a verdict without connecting observable evidence to the prediction.</p>
-          <p>ThinkOmni unifies explicit forensic reasoning, three-class spoofing detection, and temporal manipulation localization. It reasons over semantic inconsistencies, acoustic artifacts, and spectral evidence before producing an authenticity class and one or more manipulated intervals.</p>
+          <p class="lead">Existing audio forgery detection and localization methods often overfit dataset-specific low-level artifacts, limiting their generalization to subtle, localized, and unseen manipulations.</p>
+          <p>ThinkOmni jointly performs explicit forensic reasoning, spoofing detection, and temporal manipulation localization. It connects semantic inconsistencies, acoustic artifacts, and spectral-visual evidence with the detection and localization targets instead of relying only on implicit latent correlations.</p>
           <blockquote>Can audio forgery detection and localization benefit from explicit forensic reasoning beyond implicit low-level features?</blockquote>
         </div>
       </div>
       <div class="shell evidence-row" aria-label="ThinkOmni outputs">
         <div>
           <span class="evidence-index">01</span><i data-lucide="brain" aria-hidden="true"></i>
-          <h3>Reason</h3><p>Connect forensic cues to an inspectable rationale.</p>
+          <h3>Reason</h3><p>Generate structured reasoning over complementary multi-modal forensic evidence.</p>
         </div>
         <div>
           <span class="evidence-index">02</span><i data-lucide="shield-check" aria-hidden="true"></i>
-          <h3>Detect</h3><p>Distinguish real, fully fake, and partially fake audio.</p>
+          <h3>Detect</h3><p>Classify audio as fully real, fully fake, or partially fake.</p>
         </div>
         <div>
           <span class="evidence-index">03</span><i data-lucide="scan-line" aria-hidden="true"></i>
-          <h3>Localize</h3><p>Resolve one or more manipulated temporal intervals.</p>
+          <h3>Localize</h3><p>Predict one or more temporal intervals for manipulated segments.</p>
         </div>
       </div>
     </section>
@@ -120,48 +122,52 @@
     <section class="section facot-section" id="facot">
       <div class="shell section-heading split-heading">
         <div><p class="eyebrow">Forensic-Aware Chain-of-Thought</p><h2>FACoT</h2></div>
-        <p>A 100K-sample reasoning dataset that moves audio forensics from direct supervision toward structured, evidence-grounded explanation.</p>
+        <p>A 100K-sample dataset with structured forensic evidence and reasoning annotations for explicit reasoning supervision.</p>
       </div>
       <figure class="shell-wide feature-figure">
-        <img src="static/images/facot-pipeline.png" alt="FACoT dataset construction pipeline" loading="lazy">
-        <figcaption>Eight public source datasets, expert-defined verification, SFT-based expansion, and CLAP-based rationale filtering.</figcaption>
+        <a class="figure-link" href="static/images/facot-pipeline.png" target="_blank" rel="noreferrer" title="Open full-resolution figure">
+          <img src="static/images/facot-pipeline.png" alt="FACoT dataset construction pipeline" loading="lazy">
+        </a>
+        <figcaption>FACoT construction: eight public source datasets, seed CoT annotation, expert verification, SFT-based expansion, and CLAP-based audio-text consistency filtering.</figcaption>
       </figure>
       <div class="shell facot-facts">
         <div><strong>100K</strong><span>audio samples</span></div>
         <div><strong>8</strong><span>training sources</span></div>
         <div><strong>3</strong><span>authenticity classes</span></div>
-        <div><strong>3 levels</strong><span>semantic, acoustic, temporal</span></div>
+        <div><strong>3 cue types</strong><span>semantic, acoustic, temporal</span></div>
       </div>
     </section>
 
     <section class="section method-section" id="method">
       <div class="shell section-heading">
         <p class="eyebrow">Method</p>
-        <h2>Progressive evidence alignment</h2>
-        <p>ThinkOmni is built on Qwen2.5-Omni and integrates forensic modalities progressively to reduce interference and reliance on dataset-specific shortcuts.</p>
+        <h2>Forensic-Aware Modality-Incremental Learning</h2>
+        <p>Built on Qwen2.5-Omni, ThinkOmni progressively integrates semantic, acoustic, and spectral-visual representations while reducing interference among heterogeneous modalities.</p>
       </div>
       <figure class="shell-wide framework-figure">
-        <img src="static/images/framework.png" alt="ThinkOmni framework and forensic-aware modality-incremental learning" loading="lazy">
+        <a class="figure-link" href="static/images/framework.png" target="_blank" rel="noreferrer" title="Open full-resolution figure">
+          <img src="static/images/framework.png" alt="ThinkOmni framework and forensic-aware modality-incremental learning" loading="lazy">
+        </a>
       </figure>
       <div class="shell method-list">
         <article>
-          <span>01</span><div><h3>Semantic Forensic Adaptation</h3><p>Establish transferable reasoning from speech content and speaker information.</p></div><strong>SFA</strong>
+          <span>01</span><div><h3>Semantic Forensic Adaptation</h3><p>Establish transferable semantic reasoning from speech content and speaker information.</p></div><strong>SFA</strong>
         </article>
         <article>
-          <span>02</span><div><h3>Acoustic Forensic Augmentation</h3><p>Introduce fine-grained acoustic evidence through the SAFE module.</p></div><strong>AFA</strong>
+          <span>02</span><div><h3>Acoustic Forensic Augmentation</h3><p>Introduce fine-grained acoustic evidence to capture subtle manipulation artifacts.</p></div><strong>AFA</strong>
         </article>
         <article>
-          <span>03</span><div><h3>Multi-modal Forensic Refinement</h3><p>Align spectrogram-based visual cues with the established forensic space.</p></div><strong>MFR</strong>
+          <span>03</span><div><h3>Multi-modal Forensic Refinement</h3><p>Integrate spectrogram-based visual cues for cross-modal verification.</p></div><strong>MFR</strong>
         </article>
       </div>
 
       <div class="shell safe-layout">
         <div>
           <p class="eyebrow">Semantic-Acoustic Forensic Enhancer</p>
-          <h2>Local evidence.<br>Global context.</h2>
-          <p>SAFE combines local cross-attention for fine-grained cue interaction with a global forgery discriminator for long-range forensic modeling. A learned gate fuses both views before the Thinker backbone.</p>
+          <h2>Local and global forensic modeling</h2>
+          <p>SAFE comprises a local cross-attention branch for fine-grained cue interaction and a global forgery discriminator for long-range forensic modeling. A learned gate fuses both views before the Thinker backbone.</p>
         </div>
-        <figure><img src="static/images/safe-module.png" alt="Architecture of the SAFE module" loading="lazy"></figure>
+        <figure><a class="figure-link" href="static/images/safe-module.png" target="_blank" rel="noreferrer" title="Open full-resolution figure"><img src="static/images/safe-module.png" alt="Architecture of the SAFE module" loading="lazy"></a></figure>
       </div>
     </section>
 
@@ -169,8 +175,8 @@
       <div class="shell result-layout">
         <div class="result-copy">
           <p class="eyebrow">Cross-dataset evaluation</p>
-          <h2>Localization that survives distribution shift</h2>
-          <p>ADD 2023 Track 2 and Speech-Forensics are held out from training. ThinkOmni retains substantially stronger temporal localization than both SSL- and ALLM-based baselines.</p>
+          <h2>Cross-dataset temporal localization</h2>
+          <p>ADD 2023 Track 2 and Speech-Forensics are held out from training. ThinkOmni achieves 74.67% average mAP, exceeding the best SSL-based method by 43.73 points and the best ALLM-based method by 15.32 points.</p>
           <p class="result-caveat">mAP is averaged over temporal IoU thresholds from 0.5 to 0.95. Claims are limited to the two held-out benchmarks evaluated in the paper.</p>
         </div>
         <div class="bar-chart" role="img" aria-label="Cross-dataset temporal localization mAP comparison">
@@ -183,8 +189,10 @@
         </div>
       </div>
       <figure class="shell ablation-figure">
-        <img src="static/images/reasoning-ablation.png" alt="Cross-dataset ablation of reasoning supervision and inference strategies" loading="lazy">
-        <figcaption>Sample-specific reasoning and FCML improve temporal evidence modeling; shuffled rationales degrade every metric.</figcaption>
+        <a class="figure-link" href="static/images/reasoning-ablation.png" target="_blank" rel="noreferrer" title="Open full-resolution figure">
+          <img src="static/images/reasoning-ablation.png" alt="Cross-dataset ablation of reasoning supervision and inference strategies" loading="lazy">
+        </a>
+        <figcaption>Under direct inference, FCML improves mAP by 10.43%. ShuffCoT degrades all metrics, confirming the importance of sample-specific rationales.</figcaption>
       </figure>
     </section>
 
@@ -194,7 +202,9 @@
         <p>Representative cases show how ThinkOmni organizes acoustic, prosodic, environmental, and semantic cues while producing detection and localization outputs.</p>
       </div>
       <figure class="shell case-figure">
-        <img src="static/images/case-studies.png" alt="ThinkOmni case studies for fully real, fully fake, and partially fake audio" loading="lazy">
+        <a class="figure-link" href="static/images/case-studies.png" target="_blank" rel="noreferrer" title="Open full-resolution figure">
+          <img src="static/images/case-studies.png" alt="ThinkOmni case studies for fully real, fully fake, and partially fake audio" loading="lazy">
+        </a>
       </figure>
     </section>
 
