@@ -54,12 +54,13 @@
         <p class="hero-title">A Reasoning-Driven Omni-Modal LLM Framework for Audio Forgery Detection and Localization</p>
         <div class="authors" aria-label="Authors">
           <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=cnLNyncAAAAJ" target="_blank" rel="noreferrer">Yuxiong Xu</a>
-          <a href="https://scholar.google.com/scholar?q=Kaiqing+Lin" target="_blank" rel="noreferrer">Kaiqing Lin</a>
-          <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=g0iR9IkAAAAJ" target="_blank" rel="noreferrer">Bin Li</a>
-          <a href="https://scholar.google.com/scholar?q=Haodong+Li+audio+forensics" target="_blank" rel="noreferrer">Haodong Li</a>
-          <a href="https://scholar.google.com/scholar?q=Sheng+Li+Afirstsoft" target="_blank" rel="noreferrer">Sheng Li</a>
+          <a href="https://scholar.google.com/citations?user=X5IMtscAAAAJ" target="_blank" rel="noreferrer">Kaiqing Lin</a>
+          <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=g0iR9IkAAAAJ" target="_blank" rel="noreferrer">Bin Li<sup>*</sup></a>
+          <a href="https://scholar.google.com/citations?user=8jOuzaEAAAAJ" target="_blank" rel="noreferrer">Haodong Li</a>
+          <a href="https://www.tianyancha.com/human/1988801309-c2490713249" target="_blank" rel="noreferrer">Sheng Li</a>
         </div>
-        <p class="affiliations">Shenzhen University &nbsp;·&nbsp; Afirstsoft Technology Group Co., Ltd.</p>
+        <p class="affiliations">Shenzhen University &nbsp;&middot;&nbsp; Afirstsoft Technology Group Co., Ltd.</p>
+        <p class="corresponding-author"><sup>*</sup> Corresponding author</p>
         <div class="resource-row" aria-label="Project resources">
           <span class="resource disabled" aria-disabled="true" title="Paper coming soon">
             <i data-lucide="file-text" aria-hidden="true"></i><span>Paper</span><small>Soon</small>
@@ -87,7 +88,6 @@
           <div class="overview-copy">
             <p class="lead">Existing audio forgery detection and localization methods often overfit dataset-specific low-level artifacts, limiting their generalization to subtle, localized, and unseen manipulations.</p>
             <p>ThinkOmni jointly performs explicit forensic reasoning, spoofing detection, and temporal manipulation localization. It connects semantic inconsistencies, acoustic artifacts, and spectral-visual evidence with the detection and localization targets instead of relying only on implicit latent correlations.</p>
-            <blockquote>Can audio forgery detection and localization benefit from explicit forensic reasoning beyond implicit low-level features?</blockquote>
           </div>
         </div>
         <figure class="overview-figure">
@@ -95,6 +95,7 @@
             <img src="static/images/model-comparison.png" alt="Comparison of existing SSL- and ALLM-based methods with ThinkOmni">
           </a>
         </figure>
+        <blockquote class="overview-question">Can audio forgery detection and localization benefit from explicit forensic reasoning beyond implicit low-level features?</blockquote>
       </div>
       <div class="shell evidence-row" aria-label="ThinkOmni outputs">
         <div>
@@ -202,13 +203,42 @@
     <section class="section case-section" id="cases">
       <div class="shell section-heading split-heading">
         <div><p class="eyebrow">Qualitative analysis</p><h2>Inspect the reasoning</h2></div>
-        <p>Representative cases show how ThinkOmni organizes acoustic, prosodic, environmental, and semantic cues while producing detection and localization outputs.</p>
+        <p>Listen to representative SINE_v2 samples and compare their spectrograms, ground-truth labels, and ThinkOmni predictions.</p>
       </div>
-      <figure class="shell case-figure">
-        <a class="figure-link" href="static/images/case-studies.png" target="_blank" rel="noreferrer" title="Open full-resolution figure">
-          <img src="static/images/case-studies.png" alt="ThinkOmni case studies for fully real, fully fake, and partially fake audio" loading="lazy">
-        </a>
-      </figure>
+      <div class="shell sample-grid">
+        <article class="sample-card">
+          <header><span class="sample-index">01</span><div><p>SINE_v2</p><h3>Fully real</h3></div></header>
+          <img class="sample-spectrogram" src="static/samples/fully-real.png" alt="Spectrogram of the fully real SINE_v2 sample" loading="lazy">
+          <audio controls preload="metadata" src="static/samples/fully-real.wav">Your browser does not support audio playback.</audio>
+          <div class="sample-results">
+            <div><span>Ground truth</span><strong>Fully real <small>Class 0</small></strong><p>Localization: None</p></div>
+            <div><span>ThinkOmni</span><strong>Fully real <small>Class 0</small></strong><p>Localization: None</p></div>
+          </div>
+          <details><summary>Forensic reasoning</summary><p>Natural pitch declination, fluid co-articulation, and organic glottal pulses are observed without the over-smoothed high-frequency texture typical of neural vocoders.</p></details>
+        </article>
+
+        <article class="sample-card">
+          <header><span class="sample-index">02</span><div><p>SINE_v2</p><h3>Fully fake</h3></div></header>
+          <img class="sample-spectrogram" src="static/samples/fully-fake.png" alt="Spectrogram of the fully fake SINE_v2 sample" loading="lazy">
+          <audio controls preload="metadata" src="static/samples/fully-fake.wav">Your browser does not support audio playback.</audio>
+          <div class="sample-results">
+            <div><span>Ground truth</span><strong>Fully fake <small>Class 1</small></strong><p>Localization: 0.00-6.76 s</p></div>
+            <div><span>ThinkOmni</span><strong>Fully fake <small>Class 1</small></strong><p>Localization: 0.00-6.76 s</p></div>
+          </div>
+          <details><summary>Forensic reasoning</summary><p>Vocoder-induced metallic ringing, phase-coherence issues, unnaturally flat pitch, and an over-smoothed high-frequency response persist throughout the clip.</p></details>
+        </article>
+
+        <article class="sample-card">
+          <header><span class="sample-index">03</span><div><p>SINE_v2</p><h3>Partially fake</h3></div></header>
+          <img class="sample-spectrogram" src="static/samples/partially-fake.png" alt="Spectrogram of the partially fake SINE_v2 sample" loading="lazy">
+          <audio controls preload="metadata" src="static/samples/partially-fake.wav">Your browser does not support audio playback.</audio>
+          <div class="sample-results">
+            <div><span>Ground truth</span><strong>Partially fake <small>Class 2</small></strong><p>Localization: 0.64-0.92 s</p></div>
+            <div><span>ThinkOmni</span><strong>Partially fake <small>Class 2</small></strong><p>Localization: 0.64-0.92 s</p></div>
+          </div>
+          <details><summary>Forensic reasoning</summary><p>Phase discontinuities and noise-floor shifts occur at 0.64 s and 0.92 s, while metallic ringing and reduced high-frequency harmonics are localized within the predicted interval.</p></details>
+        </article>
+      </div>
     </section>
 
     <section class="citation-section" id="citation">
