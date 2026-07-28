@@ -9,11 +9,11 @@
   <meta property="og:description" content="Joint forensic reasoning, audio forgery detection, and temporal manipulation localization.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://beyond0814.github.io/ThinkOmni/">
-  <meta property="og:image" content="https://beyond0814.github.io/ThinkOmni/static/images/model-comparison-single.png">
+  <meta property="og:image" content="https://beyond0814.github.io/ThinkOmni/static/images/model-comparison.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ThinkOmni: Reasoning-Driven Omni-Modal Audio Forensics">
   <meta name="twitter:description" content="Joint forensic reasoning, audio forgery detection, and temporal manipulation localization.">
-  <meta name="twitter:image" content="https://beyond0814.github.io/ThinkOmni/static/images/model-comparison-single.png">
+  <meta name="twitter:image" content="https://beyond0814.github.io/ThinkOmni/static/images/model-comparison.png">
   <title>ThinkOmni | Reasoning-Driven Omni-Modal Audio Forensics</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
   <header class="site-header">
     <nav class="nav shell" aria-label="Main navigation">
       <a class="wordmark" href="#top" aria-label="ThinkOmni home">
-        <span class="wordmark-symbol" aria-hidden="true"><i data-lucide="audio-waveform"></i></span>
+        <img class="wordmark-logo" src="static/images/title-icon.png" alt="" aria-hidden="true">
         <span>ThinkOmni</span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" title="Open navigation">
@@ -53,11 +53,11 @@
         <h1>ThinkOmni</h1>
         <p class="hero-title">A Reasoning-Driven Omni-Modal LLM Framework for Audio Forgery Detection and Localization</p>
         <div class="authors" aria-label="Authors">
-          <a href="https://orcid.org/0000-0002-0514-3698" target="_blank" rel="noreferrer">Yuxiong Xu</a>
-          <a href="https://orcid.org/0000-0002-5291-4635" target="_blank" rel="noreferrer">Kaiqing Lin</a>
-          <a href="https://orcid.org/0000-0002-2613-5451" target="_blank" rel="noreferrer">Bin Li</a>
-          <a href="https://orcid.org/0000-0003-0532-9481" target="_blank" rel="noreferrer">Haodong Li</a>
-          <a href="https://orcid.org/0009-0000-2761-1918" target="_blank" rel="noreferrer">Sheng Li</a>
+          <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=cnLNyncAAAAJ" target="_blank" rel="noreferrer">Yuxiong Xu</a>
+          <a href="https://scholar.google.com/scholar?q=Kaiqing+Lin" target="_blank" rel="noreferrer">Kaiqing Lin</a>
+          <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=g0iR9IkAAAAJ" target="_blank" rel="noreferrer">Bin Li</a>
+          <a href="https://scholar.google.com/scholar?q=Haodong+Li+audio+forensics" target="_blank" rel="noreferrer">Haodong Li</a>
+          <a href="https://scholar.google.com/scholar?q=Sheng+Li+Afirstsoft" target="_blank" rel="noreferrer">Sheng Li</a>
         </div>
         <p class="affiliations">Shenzhen University &nbsp;·&nbsp; Afirstsoft Technology Group Co., Ltd.</p>
         <div class="resource-row" aria-label="Project resources">
@@ -75,37 +75,39 @@
           </span>
         </div>
       </div>
-      <div class="shell-wide hero-visual">
-        <a class="figure-link" href="static/images/model-comparison-single.png" target="_blank" rel="noreferrer" title="Open full-resolution figure">
-          <img src="static/images/model-comparison-single.png" alt="Single-case comparison of SSL-based, ALLM-based, and ThinkOmni audio forgery detection and localization">
-        </a>
-      </div>
     </section>
 
     <section class="section overview" id="overview">
-      <div class="shell overview-grid">
-        <div class="section-heading">
-          <p class="eyebrow">From implicit prediction</p>
-          <h2>Evidence-driven analysis</h2>
+      <div class="shell overview-layout">
+        <div class="overview-content">
+          <div class="section-heading">
+            <p class="eyebrow">From implicit prediction</p>
+            <h2>Evidence-driven analysis</h2>
+          </div>
+          <div class="overview-copy">
+            <p class="lead">Existing audio forgery detection and localization methods often overfit dataset-specific low-level artifacts, limiting their generalization to subtle, localized, and unseen manipulations.</p>
+            <p>ThinkOmni jointly performs explicit forensic reasoning, spoofing detection, and temporal manipulation localization. It connects semantic inconsistencies, acoustic artifacts, and spectral-visual evidence with the detection and localization targets instead of relying only on implicit latent correlations.</p>
+            <blockquote>Can audio forgery detection and localization benefit from explicit forensic reasoning beyond implicit low-level features?</blockquote>
+          </div>
         </div>
-        <div class="overview-copy">
-          <p class="lead">Existing audio forgery detection and localization methods often overfit dataset-specific low-level artifacts, limiting their generalization to subtle, localized, and unseen manipulations.</p>
-          <p>ThinkOmni jointly performs explicit forensic reasoning, spoofing detection, and temporal manipulation localization. It connects semantic inconsistencies, acoustic artifacts, and spectral-visual evidence with the detection and localization targets instead of relying only on implicit latent correlations.</p>
-          <blockquote>Can audio forgery detection and localization benefit from explicit forensic reasoning beyond implicit low-level features?</blockquote>
-        </div>
+        <figure class="overview-figure">
+          <a class="figure-link" href="static/images/model-comparison.png" target="_blank" rel="noreferrer" title="Open full-resolution figure">
+            <img src="static/images/model-comparison.png" alt="Comparison of existing SSL- and ALLM-based methods with ThinkOmni">
+          </a>
+        </figure>
       </div>
       <div class="shell evidence-row" aria-label="ThinkOmni outputs">
         <div>
-          <span class="evidence-index">01</span><i data-lucide="brain" aria-hidden="true"></i>
-          <h3>Reason</h3><p>Generate structured reasoning over complementary multi-modal forensic evidence.</p>
+          <div class="evidence-title"><span class="evidence-index">01</span><i data-lucide="brain" aria-hidden="true"></i><h3>Reason</h3></div>
+          <p>Generate explicit forensic reasoning from semantic, acoustic, and spectral-visual evidence.</p>
         </div>
         <div>
-          <span class="evidence-index">02</span><i data-lucide="shield-check" aria-hidden="true"></i>
-          <h3>Detect</h3><p>Classify audio as fully real, fully fake, or partially fake.</p>
+          <div class="evidence-title"><span class="evidence-index">02</span><i data-lucide="shield-check" aria-hidden="true"></i><h3>Detect</h3></div>
+          <p>Classify audio as fully real, fully fake, or partially fake.</p>
         </div>
         <div>
-          <span class="evidence-index">03</span><i data-lucide="scan-line" aria-hidden="true"></i>
-          <h3>Localize</h3><p>Predict one or more temporal intervals for manipulated segments.</p>
+          <div class="evidence-title"><span class="evidence-index">03</span><i data-lucide="scan-line" aria-hidden="true"></i><h3>Localize</h3></div>
+          <p>Predict one or more temporal intervals corresponding to manipulated segments.</p>
         </div>
       </div>
     </section>
@@ -122,9 +124,9 @@
         <figcaption>FACoT construction: eight public source datasets, seed CoT annotation, expert verification, SFT-based expansion, and CLAP-based audio-text consistency filtering.</figcaption>
       </figure>
       <div class="shell facot-facts">
-        <div><strong>100K</strong><span>audio samples with structured forensic evidence and reasoning annotations</span></div>
-        <div><strong>8</strong><span>source datasets: 19LA, HAD, PS, LAV-DF, ArEnAV, LPS, SINE, and AV-1M++</span></div>
-        <div><strong>3</strong><span>authenticity classes: fully real, fully fake, and partially fake</span></div>
+        <div><p class="fact-title"><strong>100K</strong><span>audio samples</span></p><p>Structured forensic evidence and reasoning annotations.</p></div>
+        <div><p class="fact-title"><strong>8</strong><span>source datasets</span></p><p>19LA, HAD, PS, LAV-DF, ArEnAV, LPS, SINE, and AV-1M++.</p></div>
+        <div><p class="fact-title"><strong>3</strong><span>authenticity classes</span></p><p>Fully real, fully fake, and partially fake.</p></div>
       </div>
     </section>
 
@@ -141,13 +143,13 @@
       </figure>
       <div class="shell method-list">
         <article>
-          <span>01</span><div><h3>Semantic Forensic Adaptation <span class="method-abbr">(SFA)</span></h3><p>Establish transferable semantic reasoning from speech content and speaker information.</p></div>
+          <div class="method-stage-title"><span>01</span><h3>Semantic Forensic Adaptation <span class="method-abbr">(SFA)</span></h3></div><p>Establish transferable semantic reasoning from speech content and speaker information.</p>
         </article>
         <article>
-          <span>02</span><div><h3>Acoustic Forensic Augmentation <span class="method-abbr">(AFA)</span></h3><p>Introduce fine-grained acoustic evidence to capture subtle manipulation artifacts.</p></div>
+          <div class="method-stage-title"><span>02</span><h3>Acoustic Forensic Augmentation <span class="method-abbr">(AFA)</span></h3></div><p>Introduce fine-grained acoustic evidence to capture subtle manipulation artifacts.</p>
         </article>
         <article>
-          <span>03</span><div><h3>Multi-modal Forensic Refinement <span class="method-abbr">(MFR)</span></h3><p>Integrate spectrogram-based visual cues for cross-modal verification.</p></div>
+          <div class="method-stage-title"><span>03</span><h3>Multi-modal Forensic Refinement <span class="method-abbr">(MFR)</span></h3></div><p>Integrate spectrogram-based visual cues for cross-modal verification.</p>
         </article>
       </div>
 
@@ -224,12 +226,5 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="shell footer-layout">
-      <a class="wordmark" href="#top"><span class="wordmark-symbol" aria-hidden="true"><i data-lucide="audio-waveform"></i></span><span>ThinkOmni</span></a>
-      <p>Reasoning-driven omni-modal audio forensics.</p>
-      <p>Structure inspired by the <a href="https://github.com/Beyond0814/ALDEN" target="_blank" rel="noreferrer">ALDEN project page</a>.</p>
-    </div>
-  </footer>
 </body>
 </html>
