@@ -49,7 +49,6 @@
   <main id="top">
     <section class="hero">
       <div class="shell hero-copy">
-        <p class="eyebrow">Reasoning-driven omni-modal audio forensics</p>
         <h1>ThinkOmni</h1>
         <p class="hero-title">A Reasoning-Driven Omni-Modal LLM Framework for Audio Forgery Detection and Localization</p>
         <div class="authors" aria-label="Authors">
@@ -203,41 +202,22 @@
     <section class="section case-section" id="cases">
       <div class="shell section-heading split-heading">
         <div><p class="eyebrow">Qualitative analysis</p><h2>Inspect the reasoning</h2></div>
-        <p>Listen to representative SINE_v2 samples and compare their spectrograms, ground-truth labels, and ThinkOmni predictions.</p>
+        <p>Browse all 84 samples from 10 datasets. Each entry preserves the complete ThinkOmni response from its source TXT file without editing or truncation.</p>
       </div>
-      <div class="shell sample-grid">
-        <article class="sample-card">
-          <header><span class="sample-index">01</span><div><p>SINE_v2</p><h3>Fully real</h3></div></header>
-          <img class="sample-spectrogram" src="static/samples/fully-real.png" alt="Spectrogram of the fully real SINE_v2 sample" loading="lazy">
-          <audio controls preload="metadata" src="static/samples/fully-real.wav">Your browser does not support audio playback.</audio>
-          <div class="sample-results">
-            <div><span>Ground truth</span><strong>Fully real <small>Class 0</small></strong><p>Localization: None</p></div>
-            <div><span>ThinkOmni</span><strong>Fully real <small>Class 0</small></strong><p>Localization: None</p></div>
-          </div>
-          <details><summary>Forensic reasoning</summary><p>Natural pitch declination, fluid co-articulation, and organic glottal pulses are observed without the over-smoothed high-frequency texture typical of neural vocoders.</p></details>
-        </article>
-
-        <article class="sample-card">
-          <header><span class="sample-index">02</span><div><p>SINE_v2</p><h3>Fully fake</h3></div></header>
-          <img class="sample-spectrogram" src="static/samples/fully-fake.png" alt="Spectrogram of the fully fake SINE_v2 sample" loading="lazy">
-          <audio controls preload="metadata" src="static/samples/fully-fake.wav">Your browser does not support audio playback.</audio>
-          <div class="sample-results">
-            <div><span>Ground truth</span><strong>Fully fake <small>Class 1</small></strong><p>Localization: 0.00-6.76 s</p></div>
-            <div><span>ThinkOmni</span><strong>Fully fake <small>Class 1</small></strong><p>Localization: 0.00-6.76 s</p></div>
-          </div>
-          <details><summary>Forensic reasoning</summary><p>Vocoder-induced metallic ringing, phase-coherence issues, unnaturally flat pitch, and an over-smoothed high-frequency response persist throughout the clip.</p></details>
-        </article>
-
-        <article class="sample-card">
-          <header><span class="sample-index">03</span><div><p>SINE_v2</p><h3>Partially fake</h3></div></header>
-          <img class="sample-spectrogram" src="static/samples/partially-fake.png" alt="Spectrogram of the partially fake SINE_v2 sample" loading="lazy">
-          <audio controls preload="metadata" src="static/samples/partially-fake.wav">Your browser does not support audio playback.</audio>
-          <div class="sample-results">
-            <div><span>Ground truth</span><strong>Partially fake <small>Class 2</small></strong><p>Localization: 0.64-0.92 s</p></div>
-            <div><span>ThinkOmni</span><strong>Partially fake <small>Class 2</small></strong><p>Localization: 0.64-0.92 s</p></div>
-          </div>
-          <details><summary>Forensic reasoning</summary><p>Phase discontinuities and noise-floor shifts occur at 0.64 s and 0.92 s, while metallic ringing and reduced high-frequency harmonics are localized within the predicted interval.</p></details>
-        </article>
+      <div class="shell sample-browser">
+        <form class="sample-filters" aria-label="Filter reasoning samples">
+          <label>Dataset<select id="sample-dataset"><option value="all">All datasets</option></select></label>
+          <label>Ground-truth class<select id="sample-class"><option value="all">All classes</option><option value="0">Fully real</option><option value="1">Fully fake</option><option value="2">Partially fake</option></select></label>
+          <label>Prediction status<select id="sample-status-filter"><option value="all">All results</option><option value="correct">Correct prediction</option><option value="mismatch">Class or localization mismatch</option></select></label>
+          <label>Search<input id="sample-search" type="search" placeholder="Sample name or reasoning cue"></label>
+        </form>
+        <div class="sample-summary" id="sample-summary" role="status">Loading all samples...</div>
+        <div class="sample-grid" id="sample-grid" aria-live="polite"></div>
+        <nav class="sample-pagination" aria-label="Sample pages">
+          <button id="sample-previous" type="button">Previous</button>
+          <span id="sample-page">Page 1</span>
+          <button id="sample-next" type="button">Next</button>
+        </nav>
       </div>
     </section>
 

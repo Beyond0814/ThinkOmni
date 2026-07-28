@@ -138,12 +138,20 @@ blockquote { margin: 28px 0 0; padding: 22px 26px; color: var(--teal-dark); back
 .ablation-figure figcaption { max-width: 940px; margin: 16px auto 0; color: #bdcbc8; font-size: 16px; line-height: 1.6; text-align: center; }
 
 .case-section { background: white; }
-.sample-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.sample-browser { min-width: 0; }
+.sample-filters { display: grid; grid-template-columns: 1fr 1fr 1.25fr 1.45fr; gap: 12px; margin-bottom: 18px; padding: 20px; background: var(--soft); border: 1px solid var(--line); border-radius: 7px; }
+.sample-filters label { color: var(--muted); font-size: 16px; font-weight: 700; }
+.sample-filters select, .sample-filters input { width: 100%; height: 46px; margin-top: 7px; padding: 0 12px; color: var(--ink); background: white; border: 1px solid #b9c7c3; border-radius: 5px; font: 500 16px "DM Sans", sans-serif; }
+.sample-filters select:focus, .sample-filters input:focus { outline: 3px solid rgba(8, 125, 115, .16); border-color: var(--teal); }
+.sample-summary { margin: 0 0 17px; color: var(--muted); font-size: 16px; }
+.sample-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
 .sample-card { min-width: 0; padding: 24px; background: white; border: 1px solid var(--line); border-radius: 7px; box-shadow: 0 14px 34px rgba(20, 50, 46, .07); }
 .sample-card header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
 .sample-index { color: var(--teal); font-size: 16px; font-weight: 700; }
+.sample-card header > div { min-width: 0; }
 .sample-card header p { margin: 0; color: var(--muted); font-size: 16px; }
 .sample-card h3 { margin: 1px 0 0; font-size: 24px; line-height: 1.2; }
+.sample-id { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .sample-spectrogram { width: 100%; height: 142px; object-fit: cover; background: #090611; border: 1px solid #22172d; }
 .sample-card audio { width: 100%; margin: 18px 0; }
 .sample-results { display: grid; gap: 10px; }
@@ -155,6 +163,12 @@ blockquote { margin: 28px 0 0; padding: 22px 26px; color: var(--teal-dark); back
 .sample-card details { margin-top: 16px; padding-top: 15px; border-top: 1px solid var(--line); }
 .sample-card summary { color: var(--teal-dark); font-size: 16px; font-weight: 700; cursor: pointer; }
 .sample-card details p { margin: 12px 0 0; color: var(--muted); font-size: 16px; line-height: 1.6; }
+.reasoning-text { max-height: 430px; margin: 14px 0 0; padding: 18px; overflow: auto; color: var(--ink); background: var(--soft); border: 1px solid var(--line); border-radius: 5px; font: 16px/1.65 "DM Sans", sans-serif; white-space: pre-wrap; overflow-wrap: anywhere; }
+.sample-empty { grid-column: 1 / -1; margin: 0; padding: 36px; color: var(--muted); background: var(--soft); border: 1px solid var(--line); text-align: center; }
+.sample-pagination { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 28px; }
+.sample-pagination button { min-width: 104px; min-height: 44px; padding: 8px 14px; color: white; background: var(--teal); border: 1px solid var(--teal); border-radius: 5px; font: 700 16px "DM Sans", sans-serif; cursor: pointer; }
+.sample-pagination button:disabled { color: #7c8985; background: #edf2f0; border-color: var(--line); cursor: not-allowed; }
+.sample-pagination span { min-width: 120px; color: var(--muted); font-size: 16px; text-align: center; }
 
 .citation-section { padding: 86px 0; color: white; background: #0c1d1a; }
 .citation-layout { display: grid; grid-template-columns: .72fr 1.28fr; gap: 76px; align-items: center; }
@@ -178,6 +192,7 @@ pre { max-width: 100%; margin: 0; padding: 28px; overflow-x: auto; color: #e0e9e
   .overview-question { white-space: normal; }
   .metric-grid { grid-template-columns: repeat(2, 1fr); }
   .method-list { grid-template-columns: 1fr; }
+  .sample-filters { grid-template-columns: repeat(2, 1fr); }
   .sample-grid { grid-template-columns: 1fr; }
   .method-list article { min-height: 0; }
   .safe-layout, .result-layout { margin-top: 58px; padding-top: 58px; }
@@ -198,6 +213,7 @@ pre { max-width: 100%; margin: 0; padding: 28px; overflow-x: auto; color: #e0e9e
   blockquote { padding: 22px; font-size: 20px; }
   .overview-figure { padding: 8px; box-shadow: none; }
   .evidence-row, .facot-facts, .metric-grid { grid-template-columns: 1fr; }
+  .sample-filters { grid-template-columns: 1fr; padding: 16px; }
   .evidence-row > div, .facot-facts > div { min-height: 0; }
   .feature-figure, .framework-figure { width: 100%; padding: 8px; }
   .method-list article { padding: 24px; }
