@@ -47,6 +47,58 @@ document.addEventListener("DOMContentLoaded", () => {
     let filtered = [];
     let page = 1;
 
+    const sampleRoot = "static/samples/";
+    const unmappedCanonicalTextFiles = [
+      "AV-Deepfake1M-PlusPlus/real_p1_fd28b30672.txt",
+      "ArEnAV/real_p1_96fc781908.txt",
+      "ArEnAV/real_video_fake_audio_p1_13c4f8ad0e.txt",
+      "ArEnAV/real_video_fake_audio_p1_9cadac59e8.txt",
+    ];
+    const classNames = { "0": "Fully real", "1": "Fully fake", "2": "Partially fake" };
+    const detectionResult = /Detection Result:\s*([^\n\r]+)/g;
+    const localizationResult = /Localization Result:\s*([^\n\r]+)/g;
+
+    const lastField = (pattern, text) => {
+      const matches = [...String(text || "").matchAll(pattern)];
+      return matches.length ? matches[matches.length - 1][1].trim() : "Unavailable";
+    };
+
+    const resultFromText = (text) => {
+      const classId = lastField(detectionResult, text);
+      return {
+        classId,
+        className: classNames[classId] || classId,
+        localization: lastField(localizationResult, text),
+      };
+    };
+
+    const sourceUrl = (relativePath) => encodeURI(`${sampleRoot}${relativePath}`);
+
+    const readSourceSample = async (textPath) => {
+      const response = await fetch(sourceUrl(textPath));
+      if (!response.ok) throw new Error(`${textPath}: HTTP ${response.status}`);
+      const data = await response.json();
+      const slash = textPath.lastIndexOf("/");
+      const directory = textPath.slice(0, slash);
+      const sample = textPath.slice(slash + 1, -4);
+      const audioReference = String(data.audios?.[0] || "");
+      const audioExtension = audioReference.slice(audioReference.lastIndexOf(".")).toLowerCase();
+      const imageReference = String(data.images?.[0]?.path || "");
+      const imageName = imageReference.split(/[\\/]/).pop();
+      const audioPath = `${directory}/${sample}${audioExtension}`;
+      const imagePath = `${directory}/${imageName}`;
+      return {
+        id: `${directory}/${sample}`,
+        dataset: directory,
+        sample,
+        audio: sourceUrl(audioPath),
+        image: sourceUrl(imagePath),
+        groundTruth: resultFromText(data.labels),
+        prediction: resultFromText(data.response),
+        response: data.response || "",
+      };
+    };
+
     const isCorrect = (sample) => sample.groundTruth.classId === sample.prediction.classId
       && sample.groundTruth.localization === sample.prediction.localization;
 
@@ -95,12 +147,12 @@ document.addEventListener("DOMContentLoaded", () => {
       results.append(resultPanel("ThinkOmni", sample.prediction));
       card.append(results);
 
-      const details = element("details");
-      details.append(element("summary", "", "Forensic reasoning - complete TXT response"));
+      const reasoning = element("section", "sample-reasoning");
+      reasoning.append(element("h4", "", "Forensic reasoning"));
       const response = element("pre", "reasoning-text");
       response.textContent = sample.response;
-      details.append(response);
-      card.append(details);
+      reasoning.append(response);
+      card.append(reasoning);
       return card;
     };
 
@@ -142,13 +194,23 @@ document.addEventListener("DOMContentLoaded", () => {
     previous.addEventListener("click", () => { page -= 1; render(); });
     next.addEventListener("click", () => { page += 1; render(); });
 
-    fetch("static/data/samples.json")
+    fetch(`${sampleRoot}sample_rename_manifest_20260728.json`)
       .then((response) => {
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         return response.json();
       })
+      .then((manifest) => {
+        const renamedTextFiles = manifest.renames
+          .filter((item) => item.new.toLowerCase().endsWith(".txt"))
+          .map((item) => item.new);
+        const canonicalTextFiles = [...new Set([...renamedTextFiles, ...unmappedCanonicalTextFiles])];
+        if (canonicalTextFiles.length !== manifest.sample_count) {
+          throw new Error(`Expected ${manifest.sample_count} canonical samples, found ${canonicalTextFiles.length}`);
+        }
+        return Promise.all(canonicalTextFiles.map(readSourceSample));
+      })
       .then((data) => {
-        samples = data;
+        samples = data.sort((a, b) => a.id.localeCompare(b.id));
         [...new Set(samples.map((sample) => sample.dataset))].sort().forEach((dataset) => {
           const option = element("option", "", dataset);
           option.value = dataset;
@@ -157,8 +219,9 @@ document.addEventListener("DOMContentLoaded", () => {
         filtered = samples;
         render();
       })
-      .catch(() => {
-        summary.textContent = "The sample library could not be loaded.";
+      .catch((error) => {
+        console.error(error);
+        summary.textContent = "The source sample library could not be loaded.";
       });
   }
 });

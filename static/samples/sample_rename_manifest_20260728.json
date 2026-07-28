@@ -1,0 +1,649 @@
+{
+  "created_at": "2026-07-28T13:06:41.489792+08:00",
+  "root": "/data3/xuyuxiong/TruLLM/sample",
+  "rule": "Rename text and audio to the unique image stem recorded in each JSON text file.",
+  "sample_count": 84,
+  "rename_count": 160,
+  "renames": [
+    {
+      "old": "ADD2023/ADD2023_T2_E_00007427.txt",
+      "new": "ADD2023/ADD2023_T2_E_00007427_c71b4d7d79.txt"
+    },
+    {
+      "old": "ADD2023/ADD2023_T2_E_00007427.wav",
+      "new": "ADD2023/ADD2023_T2_E_00007427_c71b4d7d79.wav"
+    },
+    {
+      "old": "ADD2023/ADD2023_T2_E_00010983.txt",
+      "new": "ADD2023/ADD2023_T2_E_00010983_6f007456fd.txt"
+    },
+    {
+      "old": "ADD2023/ADD2023_T2_E_00010983.wav",
+      "new": "ADD2023/ADD2023_T2_E_00010983_6f007456fd.wav"
+    },
+    {
+      "old": "ADD2023/ADD2023_T2_E_00018480.txt",
+      "new": "ADD2023/ADD2023_T2_E_00018480_cbf708da28.txt"
+    },
+    {
+      "old": "ADD2023/ADD2023_T2_E_00018480.wav",
+      "new": "ADD2023/ADD2023_T2_E_00018480_cbf708da28.wav"
+    },
+    {
+      "old": "ADD2023/ADD2023_T2_E_00030387.txt",
+      "new": "ADD2023/ADD2023_T2_E_00030387_3e0b5a24c3.txt"
+    },
+    {
+      "old": "ADD2023/ADD2023_T2_E_00030387.wav",
+      "new": "ADD2023/ADD2023_T2_E_00030387_3e0b5a24c3.wav"
+    },
+    {
+      "old": "ADD2023/ADD2023_T2_E_00032183.txt",
+      "new": "ADD2023/ADD2023_T2_E_00032183_ca487189c4.txt"
+    },
+    {
+      "old": "ADD2023/ADD2023_T2_E_00032183.wav",
+      "new": "ADD2023/ADD2023_T2_E_00032183_ca487189c4.wav"
+    },
+    {
+      "old": "ADD2023/ADD2023_T2_E_00038726.txt",
+      "new": "ADD2023/ADD2023_T2_E_00038726_d0dfe55b20.txt"
+    },
+    {
+      "old": "ADD2023/ADD2023_T2_E_00038726.wav",
+      "new": "ADD2023/ADD2023_T2_E_00038726_d0dfe55b20.wav"
+    },
+    {
+      "old": "ADD2023/ADD2023_T2_E_00045571.txt",
+      "new": "ADD2023/ADD2023_T2_E_00045571_471969e1c8.txt"
+    },
+    {
+      "old": "ADD2023/ADD2023_T2_E_00045571.wav",
+      "new": "ADD2023/ADD2023_T2_E_00045571_471969e1c8.wav"
+    },
+    {
+      "old": "ADD2023/ADD2023_T2_E_00048932.txt",
+      "new": "ADD2023/ADD2023_T2_E_00048932_30625db2f5.txt"
+    },
+    {
+      "old": "ADD2023/ADD2023_T2_E_00048932.wav",
+      "new": "ADD2023/ADD2023_T2_E_00048932_30625db2f5.wav"
+    },
+    {
+      "old": "ASVspoof2019_LA/LA_E_1440092.txt",
+      "new": "ASVspoof2019_LA/LA_E_1440092_690ec095e0.txt"
+    },
+    {
+      "old": "ASVspoof2019_LA/LA_E_1440092.flac",
+      "new": "ASVspoof2019_LA/LA_E_1440092_690ec095e0.flac"
+    },
+    {
+      "old": "ASVspoof2019_LA/LA_E_2872872.txt",
+      "new": "ASVspoof2019_LA/LA_E_2872872_8a29c772cf.txt"
+    },
+    {
+      "old": "ASVspoof2019_LA/LA_E_2872872.flac",
+      "new": "ASVspoof2019_LA/LA_E_2872872_8a29c772cf.flac"
+    },
+    {
+      "old": "ASVspoof2019_LA/LA_E_3538749.txt",
+      "new": "ASVspoof2019_LA/LA_E_3538749_67a18c2448.txt"
+    },
+    {
+      "old": "ASVspoof2019_LA/LA_E_3538749.flac",
+      "new": "ASVspoof2019_LA/LA_E_3538749_67a18c2448.flac"
+    },
+    {
+      "old": "ASVspoof2019_LA/LA_E_5417823.txt",
+      "new": "ASVspoof2019_LA/LA_E_5417823_356a4999a6.txt"
+    },
+    {
+      "old": "ASVspoof2019_LA/LA_E_5417823.flac",
+      "new": "ASVspoof2019_LA/LA_E_5417823_356a4999a6.flac"
+    },
+    {
+      "old": "AV-Deepfake1M-PlusPlus/fake_video_real_audio_p1.txt",
+      "new": "AV-Deepfake1M-PlusPlus/fake_video_real_audio_p1_832c11dccb.txt"
+    },
+    {
+      "old": "AV-Deepfake1M-PlusPlus/fake_video_real_audio_p1.wav",
+      "new": "AV-Deepfake1M-PlusPlus/fake_video_real_audio_p1_832c11dccb.wav"
+    },
+    {
+      "old": "AV-Deepfake1M-PlusPlus/real.txt",
+      "new": "AV-Deepfake1M-PlusPlus/real_d927eb2c1f.txt"
+    },
+    {
+      "old": "AV-Deepfake1M-PlusPlus/real.wav",
+      "new": "AV-Deepfake1M-PlusPlus/real_d927eb2c1f.wav"
+    },
+    {
+      "old": "AV-Deepfake1M-PlusPlus/real_p1.txt",
+      "new": "AV-Deepfake1M-PlusPlus/real_p1_306f948a86.txt"
+    },
+    {
+      "old": "AV-Deepfake1M-PlusPlus/real_p1.wav",
+      "new": "AV-Deepfake1M-PlusPlus/real_p1_306f948a86.wav"
+    },
+    {
+      "old": "AV-Deepfake1M-PlusPlus/real_video_fake_audio.txt",
+      "new": "AV-Deepfake1M-PlusPlus/real_video_fake_audio_88cd6a5c8f.txt"
+    },
+    {
+      "old": "AV-Deepfake1M-PlusPlus/real_video_fake_audio.wav",
+      "new": "AV-Deepfake1M-PlusPlus/real_video_fake_audio_88cd6a5c8f.wav"
+    },
+    {
+      "old": "AV-Deepfake1M-PlusPlus/real_video_fake_audio_p1.txt",
+      "new": "AV-Deepfake1M-PlusPlus/real_video_fake_audio_p1_b1917fcf6f.txt"
+    },
+    {
+      "old": "AV-Deepfake1M-PlusPlus/real_video_fake_audio_p1.wav",
+      "new": "AV-Deepfake1M-PlusPlus/real_video_fake_audio_p1_b1917fcf6f.wav"
+    },
+    {
+      "old": "AV-Deepfake1M-PlusPlus/real_video_fake_audio_p2.txt",
+      "new": "AV-Deepfake1M-PlusPlus/real_video_fake_audio_p2_a61c57ccfd.txt"
+    },
+    {
+      "old": "AV-Deepfake1M-PlusPlus/real_video_fake_audio_p2.wav",
+      "new": "AV-Deepfake1M-PlusPlus/real_video_fake_audio_p2_a61c57ccfd.wav"
+    },
+    {
+      "old": "AV-Deepfake1M-PlusPlus/real_video_fake_audio_p4.txt",
+      "new": "AV-Deepfake1M-PlusPlus/real_video_fake_audio_p4_13ee91c663.txt"
+    },
+    {
+      "old": "AV-Deepfake1M-PlusPlus/real_video_fake_audio_p4.wav",
+      "new": "AV-Deepfake1M-PlusPlus/real_video_fake_audio_p4_13ee91c663.wav"
+    },
+    {
+      "old": "ArEnAV/fake_video_fake_audio_p1.txt",
+      "new": "ArEnAV/fake_video_fake_audio_p1_5971b50464.txt"
+    },
+    {
+      "old": "ArEnAV/fake_video_fake_audio_p1.wav",
+      "new": "ArEnAV/fake_video_fake_audio_p1_5971b50464.wav"
+    },
+    {
+      "old": "ArEnAV/fake_video_real_audio_p1.txt",
+      "new": "ArEnAV/fake_video_real_audio_p1_ab583a45d5.txt"
+    },
+    {
+      "old": "ArEnAV/fake_video_real_audio_p1.wav",
+      "new": "ArEnAV/fake_video_real_audio_p1_ab583a45d5.wav"
+    },
+    {
+      "old": "ArEnAV/real.txt",
+      "new": "ArEnAV/real_823783d225.txt"
+    },
+    {
+      "old": "ArEnAV/real.wav",
+      "new": "ArEnAV/real_823783d225.wav"
+    },
+    {
+      "old": "ArEnAV/real_p1.txt",
+      "new": "ArEnAV/real_p1_12315ad14a.txt"
+    },
+    {
+      "old": "ArEnAV/real_p1.wav",
+      "new": "ArEnAV/real_p1_12315ad14a.wav"
+    },
+    {
+      "old": "ArEnAV/real_video_fake_audio_p1.txt",
+      "new": "ArEnAV/real_video_fake_audio_p1_dc35d34905.txt"
+    },
+    {
+      "old": "ArEnAV/real_video_fake_audio_p1.wav",
+      "new": "ArEnAV/real_video_fake_audio_p1_dc35d34905.wav"
+    },
+    {
+      "old": "HAD/HAD_test_00001491.txt",
+      "new": "HAD/HAD_test_00001491_fe4672ca3b.txt"
+    },
+    {
+      "old": "HAD/HAD_test_00001491.wav",
+      "new": "HAD/HAD_test_00001491_fe4672ca3b.wav"
+    },
+    {
+      "old": "HAD/HAD_test_00003550.txt",
+      "new": "HAD/HAD_test_00003550_4c0bd1dd9d.txt"
+    },
+    {
+      "old": "HAD/HAD_test_00003550.wav",
+      "new": "HAD/HAD_test_00003550_4c0bd1dd9d.wav"
+    },
+    {
+      "old": "HAD/HAD_test_00004165.txt",
+      "new": "HAD/HAD_test_00004165_084e91b38d.txt"
+    },
+    {
+      "old": "HAD/HAD_test_00004165.wav",
+      "new": "HAD/HAD_test_00004165_084e91b38d.wav"
+    },
+    {
+      "old": "HAD/HAD_test_00004509.txt",
+      "new": "HAD/HAD_test_00004509_ab30b1323c.txt"
+    },
+    {
+      "old": "HAD/HAD_test_00004509.wav",
+      "new": "HAD/HAD_test_00004509_ab30b1323c.wav"
+    },
+    {
+      "old": "HAD/HAD_test_00006108.txt",
+      "new": "HAD/HAD_test_00006108_4ed8f61403.txt"
+    },
+    {
+      "old": "HAD/HAD_test_00006108.wav",
+      "new": "HAD/HAD_test_00006108_4ed8f61403.wav"
+    },
+    {
+      "old": "HAD/HAD_test_00007326.txt",
+      "new": "HAD/HAD_test_00007326_5fbc4adec7.txt"
+    },
+    {
+      "old": "HAD/HAD_test_00007326.wav",
+      "new": "HAD/HAD_test_00007326_5fbc4adec7.wav"
+    },
+    {
+      "old": "HAD/HAD_test_00007399.txt",
+      "new": "HAD/HAD_test_00007399_79d9a2eb98.txt"
+    },
+    {
+      "old": "HAD/HAD_test_00007399.wav",
+      "new": "HAD/HAD_test_00007399_79d9a2eb98.wav"
+    },
+    {
+      "old": "HAD/HAD_test_00008608.txt",
+      "new": "HAD/HAD_test_00008608_0bb2650512.txt"
+    },
+    {
+      "old": "HAD/HAD_test_00008608.wav",
+      "new": "HAD/HAD_test_00008608_0bb2650512.wav"
+    },
+    {
+      "old": "LAV-DF/007394.txt",
+      "new": "LAV-DF/007394_35eb33fc9a.txt"
+    },
+    {
+      "old": "LAV-DF/007394.wav",
+      "new": "LAV-DF/007394_35eb33fc9a.wav"
+    },
+    {
+      "old": "LAV-DF/046383.txt",
+      "new": "LAV-DF/046383_39fa0904ec.txt"
+    },
+    {
+      "old": "LAV-DF/046383.wav",
+      "new": "LAV-DF/046383_39fa0904ec.wav"
+    },
+    {
+      "old": "LAV-DF/078318.txt",
+      "new": "LAV-DF/078318_e9753a696a.txt"
+    },
+    {
+      "old": "LAV-DF/078318.wav",
+      "new": "LAV-DF/078318_e9753a696a.wav"
+    },
+    {
+      "old": "LAV-DF/090288.txt",
+      "new": "LAV-DF/090288_b1d3c2e4c5.txt"
+    },
+    {
+      "old": "LAV-DF/090288.wav",
+      "new": "LAV-DF/090288_b1d3c2e4c5.wav"
+    },
+    {
+      "old": "LAV-DF/090678.txt",
+      "new": "LAV-DF/090678_55ad110c24.txt"
+    },
+    {
+      "old": "LAV-DF/090678.wav",
+      "new": "LAV-DF/090678_55ad110c24.wav"
+    },
+    {
+      "old": "LAV-DF/113917.txt",
+      "new": "LAV-DF/113917_cc65e576d6.txt"
+    },
+    {
+      "old": "LAV-DF/113917.wav",
+      "new": "LAV-DF/113917_cc65e576d6.wav"
+    },
+    {
+      "old": "LAV-DF/114353.txt",
+      "new": "LAV-DF/114353_ec39c7a8fa.txt"
+    },
+    {
+      "old": "LAV-DF/114353.wav",
+      "new": "LAV-DF/114353_ec39c7a8fa.wav"
+    },
+    {
+      "old": "LAV-DF/125233.txt",
+      "new": "LAV-DF/125233_b78d6b7ef7.txt"
+    },
+    {
+      "old": "LAV-DF/125233.wav",
+      "new": "LAV-DF/125233_b78d6b7ef7.wav"
+    },
+    {
+      "old": "LlamaPartialSpoof/dev-clean_251_137823_000005_000000.txt",
+      "new": "LlamaPartialSpoof/dev-clean_251_137823_000005_000000_b5d8e12170.txt"
+    },
+    {
+      "old": "LlamaPartialSpoof/dev-clean_251_137823_000005_000000.wav",
+      "new": "LlamaPartialSpoof/dev-clean_251_137823_000005_000000_b5d8e12170.wav"
+    },
+    {
+      "old": "LlamaPartialSpoof/dev-clean_5895_34615_000013_000007.txt",
+      "new": "LlamaPartialSpoof/dev-clean_5895_34615_000013_000007_ec94545311.txt"
+    },
+    {
+      "old": "LlamaPartialSpoof/dev-clean_5895_34615_000013_000007.wav",
+      "new": "LlamaPartialSpoof/dev-clean_5895_34615_000013_000007_ec94545311.wav"
+    },
+    {
+      "old": "LlamaPartialSpoof/dev01-cosyvoice-partial-cf_1462_170145_000009_000003.txt",
+      "new": "LlamaPartialSpoof/dev01-cosyvoice-partial-cf_1462_170145_000009_000003_974c0337a2.txt"
+    },
+    {
+      "old": "LlamaPartialSpoof/dev01-cosyvoice-partial-cf_1462_170145_000009_000003.wav",
+      "new": "LlamaPartialSpoof/dev01-cosyvoice-partial-cf_1462_170145_000009_000003_974c0337a2.wav"
+    },
+    {
+      "old": "LlamaPartialSpoof/dev01-cosyvoice-partial-cf_3170_137482_000054_000000.txt",
+      "new": "LlamaPartialSpoof/dev01-cosyvoice-partial-cf_3170_137482_000054_000000_f0235ecc8a.txt"
+    },
+    {
+      "old": "LlamaPartialSpoof/dev01-cosyvoice-partial-cf_3170_137482_000054_000000.wav",
+      "new": "LlamaPartialSpoof/dev01-cosyvoice-partial-cf_3170_137482_000054_000000_f0235ecc8a.wav"
+    },
+    {
+      "old": "LlamaPartialSpoof/dev01-elevenlab-partial-cf_2277_149897_000009_000000.txt",
+      "new": "LlamaPartialSpoof/dev01-elevenlab-partial-cf_2277_149897_000009_000000_8b2ea87366.txt"
+    },
+    {
+      "old": "LlamaPartialSpoof/dev01-elevenlab-partial-cf_2277_149897_000009_000000.wav",
+      "new": "LlamaPartialSpoof/dev01-elevenlab-partial-cf_2277_149897_000009_000000_8b2ea87366.wav"
+    },
+    {
+      "old": "LlamaPartialSpoof/dev01-gptsovits-full_422_122949_000001_000000.txt",
+      "new": "LlamaPartialSpoof/dev01-gptsovits-full_422_122949_000001_000000_ae51f35d58.txt"
+    },
+    {
+      "old": "LlamaPartialSpoof/dev01-gptsovits-full_422_122949_000001_000000.wav",
+      "new": "LlamaPartialSpoof/dev01-gptsovits-full_422_122949_000001_000000_ae51f35d58.wav"
+    },
+    {
+      "old": "LlamaPartialSpoof/dev01-gptsovits-partial-cf_6313_66129_000027_000001.txt",
+      "new": "LlamaPartialSpoof/dev01-gptsovits-partial-cf_6313_66129_000027_000001_3dbdab2f9a.txt"
+    },
+    {
+      "old": "LlamaPartialSpoof/dev01-gptsovits-partial-cf_6313_66129_000027_000001.wav",
+      "new": "LlamaPartialSpoof/dev01-gptsovits-partial-cf_6313_66129_000027_000001_3dbdab2f9a.wav"
+    },
+    {
+      "old": "LlamaPartialSpoof/dev01-ljjets-full_1272_135031_000002_000000.txt",
+      "new": "LlamaPartialSpoof/dev01-ljjets-full_1272_135031_000002_000000_733310821b.txt"
+    },
+    {
+      "old": "LlamaPartialSpoof/dev01-ljjets-full_1272_135031_000002_000000.wav",
+      "new": "LlamaPartialSpoof/dev01-ljjets-full_1272_135031_000002_000000_733310821b.wav"
+    },
+    {
+      "old": "LlamaPartialSpoof/dev01-xttsv2-full_2086_149220_000028_000001.txt",
+      "new": "LlamaPartialSpoof/dev01-xttsv2-full_2086_149220_000028_000001_caad466d30.txt"
+    },
+    {
+      "old": "LlamaPartialSpoof/dev01-xttsv2-full_2086_149220_000028_000001.wav",
+      "new": "LlamaPartialSpoof/dev01-xttsv2-full_2086_149220_000028_000001_caad466d30.wav"
+    },
+    {
+      "old": "LlamaPartialSpoof/dev01-yourtts-full_6313_66125_000019_000004.txt",
+      "new": "LlamaPartialSpoof/dev01-yourtts-full_6313_66125_000019_000004_f21f29484e.txt"
+    },
+    {
+      "old": "LlamaPartialSpoof/dev01-yourtts-full_6313_66125_000019_000004.wav",
+      "new": "LlamaPartialSpoof/dev01-yourtts-full_6313_66125_000019_000004_f21f29484e.wav"
+    },
+    {
+      "old": "LlamaPartialSpoof/test-clean_1284_1181_000023_000002.txt",
+      "new": "LlamaPartialSpoof/test-clean_1284_1181_000023_000002_907d23d926.txt"
+    },
+    {
+      "old": "LlamaPartialSpoof/test-clean_1284_1181_000023_000002.wav",
+      "new": "LlamaPartialSpoof/test-clean_1284_1181_000023_000002_907d23d926.wav"
+    },
+    {
+      "old": "LlamaPartialSpoof/test-clean_3575_170457_000021_000000.txt",
+      "new": "LlamaPartialSpoof/test-clean_3575_170457_000021_000000_e19cd900dd.txt"
+    },
+    {
+      "old": "LlamaPartialSpoof/test-clean_3575_170457_000021_000000.wav",
+      "new": "LlamaPartialSpoof/test-clean_3575_170457_000021_000000_e19cd900dd.wav"
+    },
+    {
+      "old": "PartialSpoof/CON_E_0001409.txt",
+      "new": "PartialSpoof/CON_E_0001409_2537d102b6.txt"
+    },
+    {
+      "old": "PartialSpoof/CON_E_0001409.wav",
+      "new": "PartialSpoof/CON_E_0001409_2537d102b6.wav"
+    },
+    {
+      "old": "PartialSpoof/CON_E_0017720.txt",
+      "new": "PartialSpoof/CON_E_0017720_3f0000945f.txt"
+    },
+    {
+      "old": "PartialSpoof/CON_E_0017720.wav",
+      "new": "PartialSpoof/CON_E_0017720_3f0000945f.wav"
+    },
+    {
+      "old": "PartialSpoof/CON_E_0017724.txt",
+      "new": "PartialSpoof/CON_E_0017724_e6356851b9.txt"
+    },
+    {
+      "old": "PartialSpoof/CON_E_0017724.wav",
+      "new": "PartialSpoof/CON_E_0017724_e6356851b9.wav"
+    },
+    {
+      "old": "PartialSpoof/CON_E_0043961.txt",
+      "new": "PartialSpoof/CON_E_0043961_e8958d5650.txt"
+    },
+    {
+      "old": "PartialSpoof/CON_E_0043961.wav",
+      "new": "PartialSpoof/CON_E_0043961_e8958d5650.wav"
+    },
+    {
+      "old": "PartialSpoof/LA_E_3768434.txt",
+      "new": "PartialSpoof/LA_E_3768434_f010856563.txt"
+    },
+    {
+      "old": "PartialSpoof/LA_E_3768434.wav",
+      "new": "PartialSpoof/LA_E_3768434_f010856563.wav"
+    },
+    {
+      "old": "PartialSpoof/LA_E_4967325.txt",
+      "new": "PartialSpoof/LA_E_4967325_682976b324.txt"
+    },
+    {
+      "old": "PartialSpoof/LA_E_4967325.wav",
+      "new": "PartialSpoof/LA_E_4967325_682976b324.wav"
+    },
+    {
+      "old": "PartialSpoof/LA_E_5573498.txt",
+      "new": "PartialSpoof/LA_E_5573498_366cf517c5.txt"
+    },
+    {
+      "old": "PartialSpoof/LA_E_5573498.wav",
+      "new": "PartialSpoof/LA_E_5573498_366cf517c5.wav"
+    },
+    {
+      "old": "PartialSpoof/LA_E_5841606.txt",
+      "new": "PartialSpoof/LA_E_5841606_8fa097ffc0.txt"
+    },
+    {
+      "old": "PartialSpoof/LA_E_5841606.wav",
+      "new": "PartialSpoof/LA_E_5841606_8fa097ffc0.wav"
+    },
+    {
+      "old": "SINE_v2/dev_edit_medium-1353-twentyyearsafter_0904_librivox_64kb_mp3-twentyyearsafter_27_dumas_64kb_56.txt",
+      "new": "SINE_v2/dev_edit_medium-1353-twentyyearsafter_0904_librivox_64kb_mp3-twentyyearsafter_27_dumas_64kb_56_87f9bc492f.txt"
+    },
+    {
+      "old": "SINE_v2/dev_edit_medium-1353-twentyyearsafter_0904_librivox_64kb_mp3-twentyyearsafter_27_dumas_64kb_56.wav",
+      "new": "SINE_v2/dev_edit_medium-1353-twentyyearsafter_0904_librivox_64kb_mp3-twentyyearsafter_27_dumas_64kb_56_87f9bc492f.wav"
+    },
+    {
+      "old": "SINE_v2/dev_edit_medium-2090-twentyyearsafter_0904_librivox_64kb_mp3-twentyyearsafter_42_dumas_64kb_30.txt",
+      "new": "SINE_v2/dev_edit_medium-2090-twentyyearsafter_0904_librivox_64kb_mp3-twentyyearsafter_42_dumas_64kb_30_eb646f5578.txt"
+    },
+    {
+      "old": "SINE_v2/dev_edit_medium-2090-twentyyearsafter_0904_librivox_64kb_mp3-twentyyearsafter_42_dumas_64kb_30.wav",
+      "new": "SINE_v2/dev_edit_medium-2090-twentyyearsafter_0904_librivox_64kb_mp3-twentyyearsafter_42_dumas_64kb_30_eb646f5578.wav"
+    },
+    {
+      "old": "SINE_v2/dev_edit_medium-2448-short_story_034_0810_librivox_64kb_mp3-shortstory034_impoftheperverse_dgf_64kb_41.txt",
+      "new": "SINE_v2/dev_edit_medium-2448-short_story_034_0810_librivox_64kb_mp3-shortstory034_impoftheperverse_dgf_64kb_41_e0bab6c6ea.txt"
+    },
+    {
+      "old": "SINE_v2/dev_edit_medium-2448-short_story_034_0810_librivox_64kb_mp3-shortstory034_impoftheperverse_dgf_64kb_41.wav",
+      "new": "SINE_v2/dev_edit_medium-2448-short_story_034_0810_librivox_64kb_mp3-shortstory034_impoftheperverse_dgf_64kb_41_e0bab6c6ea.wav"
+    },
+    {
+      "old": "SINE_v2/dev_edit_medium-3656-les_mis_vol02_0906_librivox_64kb_mp3-lesmiserables_vol2_19_hugo_64kb_39.txt",
+      "new": "SINE_v2/dev_edit_medium-3656-les_mis_vol02_0906_librivox_64kb_mp3-lesmiserables_vol2_19_hugo_64kb_39_b73be1c91f.txt"
+    },
+    {
+      "old": "SINE_v2/dev_edit_medium-3656-les_mis_vol02_0906_librivox_64kb_mp3-lesmiserables_vol2_19_hugo_64kb_39.wav",
+      "new": "SINE_v2/dev_edit_medium-3656-les_mis_vol02_0906_librivox_64kb_mp3-lesmiserables_vol2_19_hugo_64kb_39_b73be1c91f.wav"
+    },
+    {
+      "old": "SINE_v2/dev_real_medium-4263-eye_dread_1109_librivox_64kb_mp3-eyeofdread_07_erskine_64kb_32.txt",
+      "new": "SINE_v2/dev_real_medium-4263-eye_dread_1109_librivox_64kb_mp3-eyeofdread_07_erskine_64kb_32_bf314c8ea6.txt"
+    },
+    {
+      "old": "SINE_v2/dev_real_medium-4263-eye_dread_1109_librivox_64kb_mp3-eyeofdread_07_erskine_64kb_32.wav",
+      "new": "SINE_v2/dev_real_medium-4263-eye_dread_1109_librivox_64kb_mp3-eyeofdread_07_erskine_64kb_32_bf314c8ea6.wav"
+    },
+    {
+      "old": "SINE_v2/dev_real_medium-453-short_story_007_64kb_mp3-adventure_speckled_band_doyle_gmh_64kb_58.txt",
+      "new": "SINE_v2/dev_real_medium-453-short_story_007_64kb_mp3-adventure_speckled_band_doyle_gmh_64kb_58_fdd8cce74a.txt"
+    },
+    {
+      "old": "SINE_v2/dev_real_medium-453-short_story_007_64kb_mp3-adventure_speckled_band_doyle_gmh_64kb_58.wav",
+      "new": "SINE_v2/dev_real_medium-453-short_story_007_64kb_mp3-adventure_speckled_band_doyle_gmh_64kb_58_fdd8cce74a.wav"
+    },
+    {
+      "old": "SINE_v2/dev_real_medium-5339-sylvias_lovers_1011_librivox_64kb_mp3-sylviaslovers_18_gaskell_64kb_34.txt",
+      "new": "SINE_v2/dev_real_medium-5339-sylvias_lovers_1011_librivox_64kb_mp3-sylviaslovers_18_gaskell_64kb_34_8e7ae1bfd1.txt"
+    },
+    {
+      "old": "SINE_v2/dev_real_medium-5339-sylvias_lovers_1011_librivox_64kb_mp3-sylviaslovers_18_gaskell_64kb_34.wav",
+      "new": "SINE_v2/dev_real_medium-5339-sylvias_lovers_1011_librivox_64kb_mp3-sylviaslovers_18_gaskell_64kb_34_8e7ae1bfd1.wav"
+    },
+    {
+      "old": "SINE_v2/dev_real_medium-77-war_and_peace_01_librivox_64kb_mp3-war_and_peace_01_18_tolstoy_64kb_47.txt",
+      "new": "SINE_v2/dev_real_medium-77-war_and_peace_01_librivox_64kb_mp3-war_and_peace_01_18_tolstoy_64kb_47_5e87c4b421.txt"
+    },
+    {
+      "old": "SINE_v2/dev_real_medium-77-war_and_peace_01_librivox_64kb_mp3-war_and_peace_01_18_tolstoy_64kb_47.wav",
+      "new": "SINE_v2/dev_real_medium-77-war_and_peace_01_librivox_64kb_mp3-war_and_peace_01_18_tolstoy_64kb_47_5e87c4b421.wav"
+    },
+    {
+      "old": "SINE_v2/dev_resyn_medium-3290-famous_seafights_0905_librivox_64kb_mp3-famousseafights_16_hale_64kb_40.txt",
+      "new": "SINE_v2/dev_resyn_medium-3290-famous_seafights_0905_librivox_64kb_mp3-famousseafights_16_hale_64kb_40_7aae604aec.txt"
+    },
+    {
+      "old": "SINE_v2/dev_resyn_medium-3290-famous_seafights_0905_librivox_64kb_mp3-famousseafights_16_hale_64kb_40.wav",
+      "new": "SINE_v2/dev_resyn_medium-3290-famous_seafights_0905_librivox_64kb_mp3-famousseafights_16_hale_64kb_40_7aae604aec.wav"
+    },
+    {
+      "old": "SINE_v2/dev_resyn_medium-3618-egyptian_tales_one_0904_librivox_64kb_mp3-egyptiantalesone_01_petrie_64kb_32.txt",
+      "new": "SINE_v2/dev_resyn_medium-3618-egyptian_tales_one_0904_librivox_64kb_mp3-egyptiantalesone_01_petrie_64kb_32_3fab929eef.txt"
+    },
+    {
+      "old": "SINE_v2/dev_resyn_medium-3618-egyptian_tales_one_0904_librivox_64kb_mp3-egyptiantalesone_01_petrie_64kb_32.wav",
+      "new": "SINE_v2/dev_resyn_medium-3618-egyptian_tales_one_0904_librivox_64kb_mp3-egyptiantalesone_01_petrie_64kb_32_3fab929eef.wav"
+    },
+    {
+      "old": "SINE_v2/dev_resyn_medium-413-story_girl_librivox_64kb_mp3-storygirl_19_montgomery_64kb_48.txt",
+      "new": "SINE_v2/dev_resyn_medium-413-story_girl_librivox_64kb_mp3-storygirl_19_montgomery_64kb_48_07ed04e772.txt"
+    },
+    {
+      "old": "SINE_v2/dev_resyn_medium-413-story_girl_librivox_64kb_mp3-storygirl_19_montgomery_64kb_48.wav",
+      "new": "SINE_v2/dev_resyn_medium-413-story_girl_librivox_64kb_mp3-storygirl_19_montgomery_64kb_48_07ed04e772.wav"
+    },
+    {
+      "old": "SINE_v2/dev_resyn_medium-5635-energyvibration_1107_librivox_64kb_mp3-energyandvibration_09_gray_64kb_12.txt",
+      "new": "SINE_v2/dev_resyn_medium-5635-energyvibration_1107_librivox_64kb_mp3-energyandvibration_09_gray_64kb_12_edc72ae992.txt"
+    },
+    {
+      "old": "SINE_v2/dev_resyn_medium-5635-energyvibration_1107_librivox_64kb_mp3-energyandvibration_09_gray_64kb_12.wav",
+      "new": "SINE_v2/dev_resyn_medium-5635-energyvibration_1107_librivox_64kb_mp3-energyandvibration_09_gray_64kb_12_edc72ae992.wav"
+    },
+    {
+      "old": "Speech-Forensics/LJ002-0153.txt",
+      "new": "Speech-Forensics/LJ002-0153_943e3716d5.txt"
+    },
+    {
+      "old": "Speech-Forensics/LJ002-0153.wav",
+      "new": "Speech-Forensics/LJ002-0153_943e3716d5.wav"
+    },
+    {
+      "old": "Speech-Forensics/LJ012-0269.txt",
+      "new": "Speech-Forensics/LJ012-0269_548eade40c.txt"
+    },
+    {
+      "old": "Speech-Forensics/LJ012-0269.wav",
+      "new": "Speech-Forensics/LJ012-0269_548eade40c.wav"
+    },
+    {
+      "old": "Speech-Forensics/LJ021-0168.txt",
+      "new": "Speech-Forensics/LJ021-0168_5ba475e4da.txt"
+    },
+    {
+      "old": "Speech-Forensics/LJ021-0168.wav",
+      "new": "Speech-Forensics/LJ021-0168_5ba475e4da.wav"
+    },
+    {
+      "old": "Speech-Forensics/LJ022-0094.txt",
+      "new": "Speech-Forensics/LJ022-0094_a598cd82bc.txt"
+    },
+    {
+      "old": "Speech-Forensics/LJ022-0094.wav",
+      "new": "Speech-Forensics/LJ022-0094_a598cd82bc.wav"
+    },
+    {
+      "old": "Speech-Forensics/LJ030-0089.txt",
+      "new": "Speech-Forensics/LJ030-0089_c96059dd11.txt"
+    },
+    {
+      "old": "Speech-Forensics/LJ030-0089.wav",
+      "new": "Speech-Forensics/LJ030-0089_c96059dd11.wav"
+    },
+    {
+      "old": "Speech-Forensics/LJ032-0228.txt",
+      "new": "Speech-Forensics/LJ032-0228_7859902ebb.txt"
+    },
+    {
+      "old": "Speech-Forensics/LJ032-0228.wav",
+      "new": "Speech-Forensics/LJ032-0228_7859902ebb.wav"
+    },
+    {
+      "old": "Speech-Forensics/LJ033-0141.txt",
+      "new": "Speech-Forensics/LJ033-0141_357090a222.txt"
+    },
+    {
+      "old": "Speech-Forensics/LJ033-0141.wav",
+      "new": "Speech-Forensics/LJ033-0141_357090a222.wav"
+    },
+    {
+      "old": "Speech-Forensics/LJ034-0034.txt",
+      "new": "Speech-Forensics/LJ034-0034_ad1c6fef67.txt"
+    },
+    {
+      "old": "Speech-Forensics/LJ034-0034.wav",
+      "new": "Speech-Forensics/LJ034-0034_ad1c6fef67.wav"
+    }
+  ]
+}

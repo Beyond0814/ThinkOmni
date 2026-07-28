@@ -160,9 +160,8 @@ blockquote { margin: 28px 0 0; padding: 22px 26px; color: var(--teal-dark); back
 .sample-results strong { display: block; margin-top: 4px; font-size: 18px; }
 .sample-results strong small { margin-left: 5px; color: var(--teal); font-size: 16px; }
 .sample-results p { margin: 4px 0 0; color: var(--muted); font-size: 16px; }
-.sample-card details { margin-top: 16px; padding-top: 15px; border-top: 1px solid var(--line); }
-.sample-card summary { color: var(--teal-dark); font-size: 16px; font-weight: 700; cursor: pointer; }
-.sample-card details p { margin: 12px 0 0; color: var(--muted); font-size: 16px; line-height: 1.6; }
+.sample-reasoning { margin-top: 16px; padding-top: 15px; border-top: 1px solid var(--line); }
+.sample-reasoning h4 { margin: 0; color: var(--teal-dark); font-size: 18px; line-height: 1.35; }
 .reasoning-text { max-height: 430px; margin: 14px 0 0; padding: 18px; overflow: auto; color: var(--ink); background: var(--soft); border: 1px solid var(--line); border-radius: 5px; font: 16px/1.65 "DM Sans", sans-serif; white-space: pre-wrap; overflow-wrap: anywhere; }
 .sample-empty { grid-column: 1 / -1; margin: 0; padding: 36px; color: var(--muted); background: var(--soft); border: 1px solid var(--line); text-align: center; }
 .sample-pagination { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 28px; }
