@@ -43,6 +43,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero-copy { max-width: 1040px; text-align: center; }
 .hero h1 { margin: 0; font-size: clamp(68px, 8vw, 102px); font-weight: 700; line-height: .94; }
 .hero-title { max-width: 980px; margin: 22px auto 0; font-size: clamp(27px, 2.5vw, 35px); font-weight: 500; line-height: 1.24; }
+.acceptance-badge { width: fit-content; margin: 18px auto 0; display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 9px 15px; color: #7c2c20; background: #fff1ec; border: 1px solid #efb6a8; border-radius: 999px; font-size: 17px; font-weight: 700; }
+.acceptance-badge svg { width: 19px; height: 19px; }
 .authors { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px 24px; margin-top: 26px; }
 .authors a { font-size: 20px; font-weight: 700; }
 .authors a:hover { text-decoration: underline; }
@@ -55,6 +57,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .resource svg { width: 17px; height: 17px; }
 .resource.primary { color: white; background: var(--teal); border-color: var(--teal); }
 .resource.primary:hover { background: var(--teal-dark); }
+.resource.paper-resource { color: white; background: var(--coral); border-color: var(--coral); }
+.resource.paper-resource:hover { background: #b84636; }
+.resource.paper-resource small { color: white; }
 .resource.disabled { color: #687571; background: #edf2f0; border-color: #d4ddda; cursor: not-allowed; }
 .resource small { color: #687571; font-size: 16px; text-transform: uppercase; }
 
