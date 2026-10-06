@@ -11,11 +11,23 @@
 
 </div>
 
+<p align="center">
+  <a href="#highlights">Highlights</a>&nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="#results">Results</a>&nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="#code-overview">Code</a>&nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="#training">Training</a>&nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="#model-and-facot-release">Models &amp; FACoT</a>
+</p>
+
+<hr>
+
 ThinkOmni is a reasoning-driven omni-modal large language model for unified **audio forgery reasoning, spoofing detection, and temporal manipulation localization**. It combines semantic, acoustic, and spectral-visual evidence to make forensic predictions more explicit and transferable across datasets.
 
 <p align="center">
   <img src="static/images/framework.png" width="95%" alt="ThinkOmni framework: progressive semantic, acoustic, and spectral-visual alignment for joint forensic reasoning, detection, and localization.">
 </p>
+
+<hr>
 
 ## Highlights
 
@@ -23,6 +35,8 @@ ThinkOmni is a reasoning-driven omni-modal large language model for unified **au
 - **FACoT · Forensic-Aware Chain-of-Thought** contains 100K samples with structured reasoning annotations grounded in semantic inconsistencies, acoustic artifacts, and temporal manipulation patterns.
 - **FMIL · Forensic-Aware Modality-Incremental Learning** progressively aligns semantic, acoustic, and spectral-visual representations while reducing interference between modalities.
 - **FCML · Forensic-Consistent Multi-task Loss** balances reasoning, detection, and localization objectives with role-aware token weighting and adaptive boundary supervision.
+
+<hr>
 
 ## Results
 
@@ -32,6 +46,8 @@ ThinkOmni achieves the following results under the evaluation protocols describe
 | :--- | ---: | ---: | ---: |
 | Intra-dataset | **93.70** | **93.72** | **88.05** |
 | Cross-dataset | **80.74** | **85.15** | **74.67** |
+
+<hr>
 
 ## Code Overview
 
@@ -53,6 +69,8 @@ audio + instruction ──> Qwen audio encoder ──┐
 audio ────────────────> XLS-R + cross-attn ──┘
 spectrogram ──────────> vision encoder ──────┘  (Stage 3)
 ~~~
+
+<hr>
 
 Build an XLS-R-enabled checkpoint with:
 
@@ -245,6 +263,8 @@ OUTPUT_DIR=result/stage2 \
 bash trainer/train_stage2_SFA_AFA.sh
 ~~~
 
+<hr>
+
 ## Citation
 
 If you find ThinkOmni useful in your research, please cite:
@@ -257,9 +277,13 @@ If you find ThinkOmni useful in your research, please cite:
 }
 ```
 
+<hr>
+
 ## Acknowledgements
 
 ThinkOmni is built on [Qwen2.5-Omni](https://github.com/QwenLM/Qwen2.5-Omni), [Wav2Vec2 XLS-R](https://huggingface.co/facebook/wav2vec2-xls-r-300m), and [ms-swift](https://github.com/modelscope/ms-swift). We thank the authors of these projects and the public audio-forensics benchmarks used in FACoT.
+
+<hr>
 
 ## Model and FACoT release
 
