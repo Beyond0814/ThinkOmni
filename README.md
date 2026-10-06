@@ -261,3 +261,22 @@ If you find ThinkOmni useful in your research, please cite:
 
 ThinkOmni is built on [Qwen2.5-Omni](https://github.com/QwenLM/Qwen2.5-Omni), [Wav2Vec2 XLS-R](https://huggingface.co/facebook/wav2vec2-xls-r-300m), and [ms-swift](https://github.com/modelscope/ms-swift). We thank the authors of these projects and the public audio-forensics benchmarks used in FACoT.
 
+## Model release
+
+The checkpoints are uploaded as separate Hugging Face repositories so each model can be downloaded independently:
+
+| Stage | Hugging Face repository |
+| :--- | :--- |
+| Stage 1 · SFA | `beyond0814/ThinkOmni-Stage1-SFA` |
+| Stage 2 · SFA + AFA | `beyond0814/ThinkOmni-Stage2-SFA-AFA` |
+| Stage 3 · SFA + AFA + MFR | `beyond0814/ThinkOmni-Stage3-SFA-AFA-MFR` |
+
+After installing and authenticating the Hugging Face CLI, upload the local checkpoints with:
+
+~~~powershell
+hf auth login
+.\scripts\upload_models_to_hf.ps1
+~~~
+
+The script uses `hf upload-large-folder`, which is suitable for the multi-gigabyte safetensors files in `model/`. It does not upload the model directories to GitHub.
+
