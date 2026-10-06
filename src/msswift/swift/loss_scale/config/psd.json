@@ -1,0 +1,11 @@
+{
+    "think": 0.2,
+    "localization": 0.6,
+    "detection_scale": 0.2,
+    "detection_class_weights": {
+      "fully fake": 0.24,
+      "fully real": 0.36,
+      "partially fake": 0.4
+    }
+  }
+  

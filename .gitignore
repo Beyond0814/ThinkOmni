@@ -1,0 +1,15 @@
+# Local and generated files
+model/
+result/
+outputs/
+.cache/
+__pycache__/
+*.pyc
+
+# Large training/evaluation annotations
+# Download or prepare these files separately.
+data/*.json
+
+# Local environments
+.env
+.venv/
